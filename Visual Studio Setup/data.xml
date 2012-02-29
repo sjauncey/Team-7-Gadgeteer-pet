@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SetupApp>
+  <App>
+    <Title>Install GHI NETMF v4.1 SDK</Title>
+    <Description>This step installs GHI NETMF v4.1 SDK.</Description>
+    <Exec>Installation Files\GHI NETMF v4.1 SDK.msi</Exec>
+  </App>
+  <App>
+    <Title>Install GHI OSH NETMF SDK</Title>
+    <Description>This step installs GHI OSH NETMF SDK.</Description>
+    <Exec>Installation Files\GHI OSH NETMF SDK.msi</Exec>
+  </App>
+  <App>
+		<Title>Install .NET Gadgeteer Core</Title>
+		<Description>This step installs .NET Gadgeteer Core.</Description>
+		<Exec>Installation Files\GadgeteerCore-2.41.500.msi</Exec>
+		<Optional>TrueChecked</Optional>
+  </App>
+  <App>
+    <Title>Install GHI .NET Gadgeteer SDK</Title>
+    <Description>This step installs GHI .NET Gadgeteer SDK.</Description>
+    <Exec>Installation Files\GHI .NET Gadgeteer SDK.msi</Exec>
+    <Optional>TrueChecked</Optional>
+    <ReadmeOptionalSetupPath>GHI .NET Gadgeteer SDK\GHI .NET Gadgeteer Release Notes.rtf</ReadmeOptionalSetupPath>
+	<ReadmeSetupPath>GHI .NET Gadgeteer SDK\Kits\FEZ Spider Kit\Documentation\GettingStartedGuide\GettingStarted.htm</ReadmeSetupPath>
+  </App>
+  <App>
+    <Title>Install Seeed .NET Gadgeteer SDK</Title>
+    <Description>This step installs Seeed .NET Gadgeteer SDK.</Description>
+    <Exec>Installation Files\Seeed NET Gadgeteer SDK.msi</Exec>
+    <Optional>TrueChecked</Optional>
+    <!--<ReadmeOptionalSetupPath>GHI .NET Gadgeteer SDK\GHI .NET Gadgeteer Release Notes.rtf</ReadmeOptionalSetupPath>
+    <ReadmeSetupPath>GHI .NET Gadgeteer SDK\Kits\FEZ Spider Kit\Documentation\GettingStartedGuide\GettingStarted.htm</ReadmeSetupPath>-->
+  </App>
+  <App>
+		<Title>Install GHI NETMF USB Drivers</Title>
+		<Description>This step installs GHI NETMF USB Drivers.</Description>
+		<Exec>Installation Files\GHI NETMF USB Drivers x64\GHI NETMF USB Drivers.msi</Exec>
+		<Optional>TrueChecked</Optional>
+		<Platform>x64</Platform>
+  </App>
+  <App>
+		<Title>Install GHI NETMF USB Drivers</Title>
+		<Description>This step installs GHI NETMF USB Drivers.</Description>
+		<Exec>Installation Files\GHI NETMF USB Drivers x86\GHI NETMF USB Drivers.msi</Exec>
+		<Optional>TrueChecked</Optional>
+		<Platform>x86</Platform>
+  </App>
+  <Updater>
+		<Title>Update my FEZ Spider firmware</Title>
+		<Description>This step will update your hardware's firmware.</Description>
+		<Exec>FEZSpiderMainboardUpdater.exe</Exec>
+		<Optional>TrueNotChecked</Optional>
+  </Updater>
+  <Updater>
+		<Title>Update my EMX (FEZ Cobra) firmware</Title>
+		<Description>This step will update your hardware's firmware.</Description>
+		<Exec>EMXUpdater.exe</Exec>
+		<Optional>TrueNotChecked</Optional>
+  </Updater>
+  <Updater>
+		<Title>Update my USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) firmware</Title>
+		<Description>This step will update your hardware's firmware.</Description>
+		<Exec>USBiziUpdater.exe</Exec>
+		<Optional>TrueNotChecked</Optional>
+  </Updater>
+   <Updater>
+		<Title>Update my ChipworkX firmware</Title>
+		<Description>This step will update your hardware's firmware.</Description>
+		<Exec>ChipworkXUpdater.exe</Exec>
+		<Optional>TrueNotChecked</Optional>
+  </Updater>
+</SetupApp>

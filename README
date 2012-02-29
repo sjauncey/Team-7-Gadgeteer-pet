@@ -1,0 +1,15 @@
+To set up Gadgeteer:
+
+1) If you do not already have VS 2010 (Express, Professional or Premium) run "Visual Studio Setup/vcs_web.exe"
+2) Next, run "Visual Studio Setup/MicroFrameworkSDK.MSI" to install the Gadgeteer SDK
+3) Next, run "Visual Studio Setup/Setup.exe" to install drivers and .dlls needed for the Spider and Seeed Modules
+4) Finall, the drivers for the Cellular Radio come seperate, so run "Visual Studio Setup/CellularRadio.msi"
+
+You can now run VS 2010 and create a new Gadgeteer Project.
+
+It appears we can't have both a camera and USB host connected at the same time. (We can use a sd card instead)
+Likewise, we can only have two of these: gyro, a cellular radio, camera, Accelerometer.
+
+If we stick with the robot thingy, we can stil use all of these at the same time:
+Power, SD Card, Camera, GPS, Display, Button, Cell Radio
+And we can use the GPS to find if it's stolen I guess. Not quite as interesting for demonstrating it though.

@@ -1,0 +1,1591 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil\fcharset0 Courier New;}{\f3\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red128\green128\blue128;\red0\green0\blue255;\red0\green0\blue0;\red0\green0\blue128;\red0\green77\blue187;\red79\green129\blue189;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf1\f0\fs24 **********************************************************\par
+\b GHI Electronics, LLC\par
+NETMF SDK for NETMF v4.1\b0\par
+**********************************************************\par
+\par
+\cf2\b SDK Version 1.0.19\par
+\fs20 February 17, 2012\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.8.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.8.0, TinyBooter V 4.1.6.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.8.0 TinyBooter V 4.1.5.1\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.8.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Fixed Wiznet socket timeout issue during receive.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra, FEZ Spider)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+{\pntext\f3\'B7\tab}The system locks out when using WiFi WEP security with the wrong key.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+{\pntext\f3\'B7\tab}The system locks out when using WiFi WEP security with the wrong key.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24 SDK Version 1.0.18\par
+\fs20 December 21, 2011\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.8.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.8.0, TinyBooter V 4.1.6.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.8.0 TinyBooter V 4.1.5.1\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.8.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Fixed CAN message out of order error.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Fixed NetworkAvailability handle with Ethernet.\par
+{\pntext\f3\'B7\tab}Fixed CAN message out of order error.\par
+{\pntext\f3\'B7\tab}Fixed several WiFi bugs and the WiFi class members have been considerably changed.\par
+{\pntext\f3\'B7\tab}Added two code examples to WiFi Class documentation\par
+{\pntext\f3\'B7\tab}The PPP connection time has been decreased from 30 seconds to less than 5.\par
+{\pntext\f3\'B7\tab}Fixed PPP connection through direct serial cable with Windows XP and Vista PCs. Example code is provided.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+{\pntext\f3\'B7\tab}The system locks out when using WiFi WEP security with the wrong key.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Fixed USB Rare issue: USB does not work if the system is powered through the external power before connection the USB cable\par
+{\pntext\f3\'B7\tab}Fixed several WiFi bugs and the WiFi class members have been considerably changed.\par
+{\pntext\f3\'B7\tab}Added two code examples to WiFi Class documentation\par
+{\pntext\f3\'B7\tab}The PPP connection time has been decreased from 30 seconds to less than 5.\par
+{\pntext\f3\'B7\tab}Fixed PPP connection through direct serial cable with Windows XP and Vista PCs. Example code is provided.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+{\pntext\f3\'B7\tab}The system locks out when using WiFi WEP security with the wrong key.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\pard\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf2\b\fs24 SDK Version 1.0.17\par
+\fs20 October 06, 2011\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.7.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.7.0, TinyBooter V 4.1.6.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.7.0 TinyBooter V 4.1.5.1\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.7.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Added updater application.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Added updater application.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Added updater application.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf1\fs24\par
+\par
+\cf2\b SDK Version 1.0.16\par
+\fs20 September 28, 2011\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.7.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.7.0, TinyBooter V 4.1.6.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.7.0 TinyBooter V 4.1.5.1\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.7.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Added software I2C under GHIElectronics.NETMF.Hardware.SoftwareI2CBus.\par
+{\pntext\f3\'B7\tab}Fixed: CAN.GetMessages doesn't throw an exception when the messages are null.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Firmware optimizations.\par
+{\pntext\f3\'B7\tab}WiFi module RedPine RS9110N-11-21_1 fixes and enhancements.\par
+{\pntext\f3\'B7\tab}USB Host Webcam enhancements.\par
+{\pntext\f3\'B7\tab}Added software I2C under GHIElectronics.NETMF.Hardware.SoftwareI2CBus.\par
+{\pntext\f3\'B7\tab}Fixed: Hibernation can rarely crash the LCD.\par
+{\pntext\f3\'B7\tab}Fixed: CAN.GetMessages doesn't throw an exception when the messages are null.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 WiFi module RedPine RS9110N-11-21_1 fixes and enhancements.\par
+{\pntext\f3\'B7\tab}USB Host Webcam enhancements.\par
+{\pntext\f3\'B7\tab}Added software I2C under GHIElectronics.NETMF.Hardware.SoftwareI2CBus.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf1\fs24\par
+\par
+\cf2\b SDK Version 1.0.15\par
+\fs20 June 30, 2011\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.6.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.6.0, TinyBooter V 4.1.6.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.6.0 TinyBooter V 4.1.5.1\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.6.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 XTEA encryption support : GHIElectronics.NETMF.System.XTEA\par
+{\pntext\f3\'B7\tab}Dropped NETMF's cryptography support\par
+{\pntext\f3\'B7\tab}Fixed: SPI baudrate settings\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USB Host webcam support\par
+{\pntext\f3\'B7\tab}Support for converting a Bitmap to a BMP file using GHIElectronics.NETMF.System.Util.BitmapToBMPFile\par
+{\pntext\f3\'B7\tab}XTEA encryption support : GHIElectronics.NETMF.System.XTEA\par
+{\pntext\f3\'B7\tab}NETMF's cryptography fix\par
+{\pntext\f3\'B7\tab}Preliminary experimental support for WiFi module RedPine RS9110N-11-21_1\par
+{\pntext\f3\'B7\tab}Fixed: SPI baudrate settings\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USB Host webcam support\par
+{\pntext\f3\'B7\tab}Support for converting a Bitmap to a BMP file using GHIElectronics.NETMF.System.Util.BitmapToBMPFile\par
+{\pntext\f3\'B7\tab}SQLite database updates and fixes\par
+{\pntext\f3\'B7\tab}XTEA encryption support : GHIElectronics.NETMF.System.XTEA\par
+{\pntext\f3\'B7\tab}NETMF's cryptography fix\par
+{\pntext\f3\'B7\tab}Preliminary experimental support for WiFi module RedPine RS9110N-11-21_1\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf1\fs24\par
+\par
+\cf2\b SDK Version 1.0.14\par
+\fs20 April 11, 2011\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.5.1\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.5.1, TinyBooter V 4.1.3.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.5.1 TinyBooter V 4.1.5.1\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.5.0\par
+{\pntext\f3\'B7\tab}GHIElectronics.NETMF.W5100.Dhcp (4.1.5.1)\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Support for lower SPI clocks\par
+{\pntext\f3\'B7\tab}Fixed: Serial port can rarely stop working if using non-standard baudrates\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Support for lower SPI clocks\par
+{\pntext\f3\'B7\tab}Fixed: Complete System Update crashing issues\par
+{\pntext\f3\'B7\tab}Fixed: Serial port can rarely stop working if using non-standard baudrates\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 LCD: Fixed crashing issues on large LCDs. Support for LCD Enable.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported.\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+SDK Version 1.0.13\par
+\fs20 March 14, 2011\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.5.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.5.0, TinyBooter V 4.1.3.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.5.0 TinyBooter V 4.1.3.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.5.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Added USB Client Joystick driver\par
+{\pntext\f3\'B7\tab}For GHIElectronics.NETMF.W5100.Http, GHIElectronics.NETMF.Net.Sockets.NetworkSteam.Write() is enhanced to accept buffers larger than 2048 bytes.\par
+{\pntext\f3\'B7\tab}Fixed: ParallelPort with USBizi "special" pins. They affected other I/Os.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Added USB Client Joystick driver\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Added USB Client Joystick driver\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported.\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+SDK Version 1.0.12 Beta\par
+\fs20 February 21, 2011\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.4.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.4.0, TinyBooter V 4.1.3.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.4.0 TinyBooter V 4.1.3.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.4.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB and SD storage optimizations\par
+{\pntext\f3\'B7\tab}New CAN driver. Class members changed. Some of the new features: optimized batch message reading, events. TimeStamps and filters. \par
+{\pntext\f3\'B7\tab}RLP support\par
+{\pntext\f3\'B7\tab}RLP native tasking support\par
+{\pntext\f3\'B7\tab}Support for more USB Joysticks types. Hat switch functionality is improved.\par
+{\pntext\f3\'B7\tab}Update to USB Host CDC and handshake support\par
+{\pntext\f3\'B7\tab}Update to USB Client CDC write issues\par
+{\pntext\f3\'B7\tab}Networking Wiznet optimizations. Speed is about 3 times faster.\par
+{\pntext\f3\'B7\tab}Added ParallelPort support\par
+{\pntext\f3\'B7\tab}Added PinCapture support\par
+{\pntext\f3\'B7\tab}Added 4KB InternalFlashStorage for the user under GHIElectronics.NETMF.Hardware\par
+{\pntext\f3\'B7\tab}Added USBHostController.Reset method\par
+{\pntext\f3\'B7\tab}OutputCompare now has a blocking option for more accurate timings\par
+{\pntext\f3\'B7\tab}Wiznet W5100 support for DHCP Client and HTTP \par
+{\pntext\f3\'B7\tab}Fixed: Serial port crashes on power up, hangs when flushing TX data with hardware handshaking enabled, RTS signal rate and others.\par
+{\pntext\f3\'B7\tab}Fixed: File system corruptions\par
+{\pntext\f3\'B7\tab}Fixed: Analog scaling problems\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}Wiznet W5100 DHCP does not renew when it expires\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USB and SD storage optimizations\par
+{\pntext\f3\'B7\tab}New CAN driver. Class members changed. Some of the new features: optimized batch message reading, events. TimeStamps and filters. \par
+{\pntext\f3\'B7\tab}RLP native tasking support\par
+{\pntext\f3\'B7\tab}Support to force EWR flushing using GHIElectronics.NETMF.System.Util.FlushExtendedWeakReferences\par
+{\pntext\f3\'B7\tab}Support for more USB Joysticks types. Hat switch functionality improved.\par
+{\pntext\f3\'B7\tab}Update to USB Host CDC and handshake support\par
+{\pntext\f3\'B7\tab}Update to USB Client CDC write issues\par
+{\pntext\f3\'B7\tab}Added ParallelPort support\par
+{\pntext\f3\'B7\tab}Added PinCapture support\par
+{\pntext\f3\'B7\tab}Added USBHostController.Reset method\par
+{\pntext\f3\'B7\tab}Fix to CANxtra graphics\par
+{\pntext\f3\'B7\tab}OutputCompare now has a blocking option for more accurate timings\par
+{\pntext\f3\'B7\tab}Fixed: Serial port crashes on power up, hangs when flushing TX data with hardware handshaking enabled, RTS signal rate and others.\par
+{\pntext\f3\'B7\tab}Fixed: Blocking delays every 5 seconds\par
+{\pntext\f3\'B7\tab}Fixed: File system corruptions\par
+{\pntext\f3\'B7\tab}Fixed: Analog scaling problems\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USB and SD storage optimizations\par
+{\pntext\f3\'B7\tab}Support to force EWR flushing using GHIElectronics.NETMF.System.Util.FlushExtendedWeakReferences\par
+{\pntext\f3\'B7\tab}RLP native tasking support\par
+{\pntext\f3\'B7\tab}Support for more USB Joysticks types. Hat switch functionality improved.\par
+{\pntext\f3\'B7\tab}Added ParallelPort support\par
+{\pntext\f3\'B7\tab}Added PinCapture support\par
+{\pntext\f3\'B7\tab}Added USBHostController.Reset method\par
+{\pntext\f3\'B7\tab}OutputCompare now has a blocking option for more accurate timings\par
+{\pntext\f3\'B7\tab}Update to USB Host CDC and handshake support\par
+{\pntext\f3\'B7\tab}Update to USB Client CDC write issues\par
+{\pntext\f3\'B7\tab}Fixed: File system corruptions\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 SerialPort hardware handshaking is not supported.\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+{\pntext\f3\'B7\tab}TimeService SNTP time update can crash\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+SDK Version 1.0.11\par
+\fs20 October 15, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.3.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.3.0, TinyBooter V 4.1.3.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.3.0 TinyBooter V 4.1.3.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.3.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Support for USB Client CDC interface plus USB NETMF debug interface through USBClientController.StandardDevices.StartCDC_WithDebugging.\par
+{\pntext\f3\'B7\tab}Note: RealTimeClock.IsTimeValid, in certain situations, does not perform as expected. It is no longer supported and always returns false. Please see RealTimeClock class for alternatives.\par
+{\pntext\f3\'B7\tab}Fixes and updates to GHIElectronics.NETMF.W5100 \par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 RSA Decrypt fails for certain input lengths.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Support for USB Client CDC interface plus USB NETMF debug interface through USBClientController.StandardDevices.StartCDC_WithDebugging.\par
+{\pntext\f3\'B7\tab}Note: RealTimeClock.IsTimeValid, in certain situations, does not perform as expected. It is no longer supported and always returns false. Please see RealTimeClock class for alternatives.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Support for USB Client CDC interface plus USB NETMF debug interface through USBClientController.StandardDevices.StartCDC_WithDebugging.\par
+{\pntext\f3\'B7\tab}Note: RealTimeClock.IsTimeValid, in certain situations, does not perform as expected. It is no longer supported and always returns false. Please see RealTimeClock class for alternatives.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Currently, COM2 handshaking is not supported.\par
+{\pntext\f3\'B7\tab}SSL works correctly. However, certification verification can fail.\par
+{\pntext\f3\'B7\tab}RSA Decrypt fails for certain input lengths.\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+SDK Version 1.0.10 Beta\par
+\fs20 September 20, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.2.1\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.2.1, TinyBooter V 4.1.2.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.2.1 TinyBooter V 4.1.2.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.2.1\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Update to AnalogOut class\par
+{\pntext\f3\'B7\tab}Fixes and updates to GHIElectronics.NETMF.W5100 \par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Update to AnalogOut class\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 No change\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Currently, COM2 handshaking is not supported.\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+SDK Version 1.0.9 Beta\par
+\fs20 September 14, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.2.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.2.0, TinyBooter V 4.1.2.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.2.0 TinyBooter V 4.1.2.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.2.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 In-field update support\par
+{\pntext\f3\'B7\tab}PWM driver updated\par
+{\pntext\f3\'B7\tab}CRC support under GHIElectronics.NETMF.System.CRC\par
+{\pntext\f3\'B7\tab}Networking Wiznet driver\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf0 Level interrupts are not supported in this release. Edge interrupts are supported.\cf4\par
+\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 In-field update support\par
+{\pntext\f3\'B7\tab}Increased UART buffers size\par
+{\pntext\f3\'B7\tab}PWM driver updated\par
+{\pntext\f3\'B7\tab}CRC support under GHIElectronics.NETMF.System.CRC\par
+{\pntext\f3\'B7\tab}Fixed: sometimes setting the TouchMoveFrequency throws an exception. This is the amount of time (in ms) to elapse before sending a move event and currently has a minimum of 50.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 In-field update support\par
+{\pntext\f3\'B7\tab}Touch events fix\par
+{\pntext\f3\'B7\tab}Increased UART buffers size\par
+{\pntext\f3\'B7\tab}CRC support under GHIElectronics.NETMF.System.CRC\par
+{\pntext\f3\'B7\tab}PWM driver updated\par
+{\pntext\f3\'B7\tab}Fixed: sometimes setting the TouchMoveFrequency throws an exception. This is the amount of time (in ms) to elapse before sending a move event and currently has a minimum of 50.\par
+{\pntext\f3\'B7\tab}Fixed: I2C driver\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Currently, COM2 handshaking is not supported.\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+SDK Version 1.0.8\par
+\fs20 August 09, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda) V 4.1.1.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.1.0, TinyBooter V 4.1.1.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.1.0 TinyBooter V 4.1.1.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.1.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino, FEZ Panda)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Hibernation support\par
+{\pntext\f3\'B7\tab}Realtime clock alarm\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Ethernet support (native driver for Wiznet)\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Hibernation support\par
+{\pntext\f3\'B7\tab}Realtime clock alarm\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\cf0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Updated release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\cf0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Currently, COM2 handshaking is not supported.\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+SDK Version 1.0.7 Beta\par
+\fs20 July 26, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.1 and Visual Studio 2010\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino, FEZ Rhino) V 4.1.0.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.1.0.0, TinyBooter V 4.1.0.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.1.0.0 TinyBooter V 4.1.0.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.1.0.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino, FEZ Rhino)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 New release for NETMF 4.1\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Ethernet support (native driver for Wiznet)\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 New release for NETMF 4.1\par
+{\pntext\f3\'B7\tab}Runtime Loadable Procedures (native code) support\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\cf0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 New release for NETMF 4.1\par
+{\pntext\f3\'B7\tab}Runtime Loadable Procedures (native code) support\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\cf0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Currently, COM2 handshaking is not supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24 SDK Version 1.0.6 Beta\par
+\fs20 June 30, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.0\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino) V 4.0.4.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.0.4.0, TinyBooter V 4.0.4.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.0.4.0 TinyBooter V 4.0.4.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.0.4.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client support including Mouse, Keyboard, CDC (Virtual COM port) and Mass Storage\par
+{\pntext\f3\'B7\tab}Updated I2C driver\par
+{\pntext\f3\'B7\tab}Added One Wire 16-bit CRC calculation\par
+{\pntext\f3\'B7\tab}Fixed: CAN communications\par
+{\pntext\f3\'B7\tab}Fixed: Inaccuracies when setting PWM duty cycle\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Ethernet support (native driver for Wiznet)\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USB Client support including Mouse, Keyboard, CDC (Virtual COM port) and Mass Storage\par
+{\pntext\f3\'B7\tab}Updated I2C driver\par
+{\pntext\f3\'B7\tab}Added One Wire 16-bit CRC calculation\par
+{\pntext\f3\'B7\tab}Added Get Serial Number for older Embedded Master modules compatibility under System.Util.\par
+{\pntext\f3\'B7\tab}Fixed: CAN channel 2 communications\par
+{\pntext\f3\'B7\tab}Fixed: Inaccuracies when setting PWM duty cycle\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\cf0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 RLP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USB Client support including Mouse, Keyboard, CDC (Virtual COM port) and Mass Storage\par
+{\pntext\f3\'B7\tab}Added One Wire 16-bit CRC calculation\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\cf0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 RLP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Currently, COM2 handshaking is not supported.\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+\par
+SDK Version 1.0.5\par
+\fs20 May 21, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+\b Important note: \b0 Requires .NET Micro Framework 4.0\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino) V 4.0.3.0\par
+{\pntext\f3\'B7\tab}EMX (FEZ Cobra) V 4.0.3.0, TinyBooter V 4.0.3.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.0.3.0 TinyBooter V 4.0.3.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.0.3.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 SPI write enchacements\par
+{\pntext\f3\'B7\tab}UART hardware errors are now reported\par
+{\pntext\f3\'B7\tab}Extended Math support using GHIElectronics.System.MathEx\par
+{\pntext\f3\'B7\tab}Added more GPIOs\par
+{\pntext\f3\'B7\tab}SD driver change and detect SD function under PersistantStorage\par
+{\pntext\f3\'B7\tab}Fixed: USB host in some cases incorrectly reports a device type as FTDI\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}Ethernet support (native driver for Wiznet)\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX (FEZ Cobra)\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 SPI write enchacements\par
+{\pntext\f3\'B7\tab}UART hardware errors are now reported\par
+{\pntext\f3\'B7\tab}LCD Rotation support\par
+{\pntext\f3\'B7\tab}Extended Math support using GHIElectronics.System.MathEx\par
+{\pntext\f3\'B7\tab}TinyBooter disable application access\par
+{\pntext\f3\'B7\tab}SD driver changes and detect SD function under PersistantStorage\par
+{\pntext\f3\'B7\tab}Fixed: USB host in some cases incorrectly reports a device type as FTDI\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 UART hardware errors are now reported\par
+{\pntext\f3\'B7\tab}LCD Rotation support\par
+{\pntext\f3\'B7\tab}Extended Math support using GHIElectronics.System.MathEx\par
+{\pntext\f3\'B7\tab}Fixed: USB host in some cases incorrectly reports a device type as FTDI\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Currently, COM2 handshaking is not supported.\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf1\fs24\par
+\par
+\cf2\b SDK Version 1.0.4\par
+\fs20 April 26, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf0\b0\par
+\par
+Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\par
+Important note: Requires .NET Micro Framework 4.0\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 USBizi (FEZ Mini, FEZ Domino) V 4.0.2.0\par
+{\pntext\f3\'B7\tab}EMX V 4.0.2.0, TinyBooter V 4.0.2.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.0.2.0 TinyBooter V 4.0.2.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.0.2.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Support for large SD/USB storage over 4 GB\par
+{\pntext\f3\'B7\tab}Persistent Storage updated\par
+{\pntext\f3\'B7\tab}USBH_Device is now in System assembly. This assembly is needed by several other assemblies.\par
+{\pntext\f3\'B7\tab}SPI enhancements\par
+{\pntext\f3\'B7\tab}Permanent user stored key feature\par
+{\pntext\f3\'B7\tab}Fixed: Time library issue\par
+{\pntext\f3\'B7\tab}Fixed: High UART Baudrate issue\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}Ethernet support (native driver for Wiznet)\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Large LCD support updated\par
+{\pntext\f3\'B7\tab}Added option to set custom heap size\par
+{\pntext\f3\'B7\tab}Added option to disable LCD bootup messages\par
+{\pntext\f3\'B7\tab}Added option to disable default touch interface\par
+{\pntext\f3\'B7\tab}Startup Logo support\par
+{\pntext\f3\'B7\tab}Support for large SD/USB storage over 4 GB\par
+{\pntext\f3\'B7\tab}Persistent Storage updated\par
+{\pntext\f3\'B7\tab}USBH_Device is now in System assembly. This assembly is needed by several other assemblies.\par
+{\pntext\f3\'B7\tab}Ethernet and networking enhancements\par
+{\pntext\f3\'B7\tab}SPI enhancements\par
+{\pntext\f3\'B7\tab}PPP support\par
+{\pntext\f3\'B7\tab}Permanent user stored key feature\par
+{\pntext\f3\'B7\tab}Fixed: High UART Baudrate issue\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}Application Protection\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release. Edge interrupts are supported.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf0\f0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 None\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Large LCD support updated\par
+{\pntext\f3\'B7\tab}Added option to set custom heap size\par
+{\pntext\f3\'B7\tab}Added option to disable LCD bootup messages\par
+{\pntext\f3\'B7\tab}Added option to disable default touch interface\par
+{\pntext\f3\'B7\tab}Support for large SD/USB storage over 4 GB\par
+{\pntext\f3\'B7\tab}Persistent Storage updated\par
+{\pntext\f3\'B7\tab}Startup Logo support\par
+{\pntext\f3\'B7\tab}NAND (internal storage flash) support\par
+{\pntext\f3\'B7\tab}USBH_Device is now in System assembly. This assembly is needed by several other assemblies.\par
+{\pntext\f3\'B7\tab}SQLite Support\par
+{\pntext\f3\'B7\tab}PPP support\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 None\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+\cf1\f0\fs24\par
+\cf2\b SDK Version 1.0.3\par
+\fs20 April 02, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\par
+\cf4\b0\par
+\cf0 Firmware, Tinybooter (if applicable) and libraries are compatible for each SDK release and they may not work with previous releases. Make sure to update all your software components including firmware and library assemblies. Otherwise, your managed application will not run at all or run incorrectly.\par
+\cf4\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USBizi (FEZ  Mini, FEZ Domino) V 4.0.1.0\par
+{\pntext\f3\'B7\tab}EMX V 4.0.1.0, TinyBooter V 4.0.1.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.0.1.0 TinyBooter V 4.0.1.0\par
+{\pntext\f3\'B7\tab}GHI NETMF Library V 4.0.1.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b USBizi (FEZ Mini, FEZ Domino)\par
+\par
+\cf6\b0 Release Info\par
+\par
+\cf0 Currently, USBizi does not support serialization.\par
+\cf6\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Real Time Clock support added to library.\par
+{\pntext\f3\'B7\tab}PWM support updated.\par
+{\pntext\f3\'B7\tab}CAN support.\par
+{\pntext\f3\'B7\tab}Watchdog support.\par
+{\pntext\f3\'B7\tab}Battery RAM support.\par
+{\pntext\f3\'B7\tab}Cryptography support.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b EMX\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 WiFi support.\par
+{\pntext\f3\'B7\tab}SSL support.\par
+{\pntext\f3\'B7\tab}Real Time Clock support added to library.\par
+{\pntext\f3\'B7\tab}Native Piezo support.\par
+{\pntext\f3\'B7\tab}PWM support updated.\par
+{\pntext\f3\'B7\tab}CAN support.\par
+{\pntext\f3\'B7\tab}Watchdog support.\par
+{\pntext\f3\'B7\tab}Battery RAM support.\par
+{\pntext\f3\'B7\tab}Changing LCD settings using software.\par
+{\pntext\f3\'B7\tab}Changing debug interface using software.\par
+{\pntext\f3\'B7\tab}CANxtra LCD support.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}PPP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}Application Protection\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+____________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 WiFi support.\par
+{\pntext\f3\'B7\tab}SSL support.\par
+{\pntext\f3\'B7\tab}Real Time Clock support added to library.\par
+{\pntext\f3\'B7\tab}PWM support updated.\par
+{\pntext\f3\'B7\tab}Watchdog support.\par
+{\pntext\f3\'B7\tab}Battery RAM support.\par
+{\pntext\f3\'B7\tab}Changing LCD settings using software.\par
+{\pntext\f3\'B7\tab}Changing debug interface using software.\par
+{\pntext\f3\'B7\tab}I2C support.\par
+{\pntext\f3\'B7\tab}Fixed: Serial port issues.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}PPP\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}NAND (internal storage flash) support\par
+{\pntext\f3\'B7\tab}Database support using SQLite\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf1\fs24\par
+\par
+\cf2\b SDK Version 1.0.2\par
+\fs20 March 12, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\cf4\b0\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 GHI NETMF Library V 1.0.0.0\par
+{\pntext\f3\'B7\tab}EMX V 1.1.0.0, TinyBooter V 1.0.0.0\par
+{\pntext\f3\'B7\tab}USBizi V 1.1.0.0\par
+{\pntext\f3\'B7\tab}ChipworkX V 4.0.0.0 TinyBooter V 4.0.0.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+______________________________________________________________________________\par
+\par
+\cf5\b EMX\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 No change. Same as last SDK release.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}CAN\par
+{\pntext\f3\'B7\tab}Watchdog\par
+{\pntext\f3\'B7\tab}SPI Busy pin\par
+{\pntext\f3\'B7\tab}PWM with more resolution for duty cyle\par
+{\pntext\f3\'B7\tab}Battery RAM\par
+{\pntext\f3\'B7\tab}Changing LCD configuration using software\par
+{\pntext\f3\'B7\tab}Changing Debug interface using software\par
+{\pntext\f3\'B7\tab}Piezo\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}WiFi\par
+{\pntext\f3\'B7\tab}PPP\par
+{\pntext\f3\'B7\tab}SSL\par
+{\pntext\f3\'B7\tab}Custom Bootup logo\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Enabling application protection\par
+{\pntext\f3\'B7\tab}Emulator\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+______________________________________________________________________________\par
+\par
+\cf5\b ChipworkX\par
+\par
+\cf6\b0 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 First Beta release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}Watchdog\par
+{\pntext\f3\'B7\tab}PWM with more resolution for duty cyle\par
+{\pntext\f3\'B7\tab}Battery RAM\par
+{\pntext\f3\'B7\tab}Changing LCD configuration using software\par
+{\pntext\f3\'B7\tab}Changing Debug interface using software and hardware (buttons)\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}WiFi\par
+{\pntext\f3\'B7\tab}PPP\par
+{\pntext\f3\'B7\tab}SSL\par
+{\pntext\f3\'B7\tab}Custom Bootup logo\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Emulator\par
+{\pntext\f3\'B7\tab}NAND (internal storage flash) support\par
+{\pntext\f3\'B7\tab}SQLite\par
+{\pntext\f3\'B7\tab}Isochronous USB Host support\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}I2C driver is preliminary\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+_____________________________________________________________________________\par
+\par
+\cf5\b USBizi\par
+\par
+\cf6\b0 Release Info\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 No change. Same as last SDK release.\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}CAN\par
+{\pntext\f3\'B7\tab}Watchdog\par
+{\pntext\f3\'B7\tab}SPI Busy pin\par
+{\pntext\f3\'B7\tab}PWM with more resolution for duty cyle\par
+{\pntext\f3\'B7\tab}Battery RAM\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+{\pntext\f3\'B7\tab}USBizi does not support serialization and cryptography\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf1\fs24\par
+\par
+\cf2\b SDK Version 1.0.1\par
+\fs20 March 05, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\cf4\b0\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 GHI NETMF Library V 1.0.0.0\par
+{\pntext\f3\'B7\tab}EMX V 1.1.0.0, TinyBooter V 1.0.0.0\par
+{\pntext\f3\'B7\tab}USBizi V 1.1.0.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+_____________________________________________________________________________\par
+\cf5\b\par
+EMX\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 Touch screen support\par
+{\pntext\f3\'B7\tab}Fix: UART 9600 Baurate\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}CAN\par
+{\pntext\f3\'B7\tab}Watchdog\par
+{\pntext\f3\'B7\tab}SPI Busy pin\par
+{\pntext\f3\'B7\tab}PWM with more resolution for duty cyle\par
+{\pntext\f3\'B7\tab}Battery RAM\par
+{\pntext\f3\'B7\tab}Changing LCD configuration using software\par
+{\pntext\f3\'B7\tab}Changing Debug interface using software\par
+{\pntext\f3\'B7\tab}Piezo\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}WiFi\par
+{\pntext\f3\'B7\tab}PPP\par
+{\pntext\f3\'B7\tab}SSL\par
+{\pntext\f3\'B7\tab}Custom Bootup logo\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Enabling application protection\par
+{\pntext\f3\'B7\tab}Emulator\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 _____________________________________________________________________________\par
+\par
+\cf5\b USBizi\par
+\par
+\cf6\b0 Release Info\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 Added XML support\par
+{\pntext\f3\'B7\tab}Fix: UART 9600 Baurate\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}CAN\par
+{\pntext\f3\'B7\tab}Watchdog\par
+{\pntext\f3\'B7\tab}SPI Busy pin\par
+{\pntext\f3\'B7\tab}PWM with more resolution for duty cyle\par
+{\pntext\f3\'B7\tab}Battery RAM\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+{\pntext\f3\'B7\tab}USBizi does not support serialization and cryptography\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24 SDK Version 1.0.0\par
+\fs20 February 26, 2010\b0\fs24\par
+\b ======================================\b0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf3\fs20\par
+\cf4\b\par
+\par
+\cf5 Version Info\cf4\b0\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 GHI NETMF Library V 1.0.0.0\par
+{\pntext\f3\'B7\tab}EMX V 1.0.0.0, TinyBooter V 1.0.0.0\par
+{\pntext\f3\'B7\tab}USBizi V 1.0.0.0\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 _____________________________________________________________________________\par
+\par
+\cf5\b EMX\cf4\par
+\b0\par
+\cf6 Release Info\cf0\b\par
+\b0\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 First Beta release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}CAN\par
+{\pntext\f3\'B7\tab}Watchdog\par
+{\pntext\f3\'B7\tab}SPI Busy pin\par
+{\pntext\f3\'B7\tab}PWM with more resolution for duty cyle\par
+{\pntext\f3\'B7\tab}Battery RAM\par
+{\pntext\f3\'B7\tab}Changing LCD configuration using software\par
+{\pntext\f3\'B7\tab}Changing Debug interface using software\par
+{\pntext\f3\'B7\tab}Piezo\par
+{\pntext\f3\'B7\tab}Touch screen\par
+{\pntext\f3\'B7\tab}RLP\par
+{\pntext\f3\'B7\tab}WiFi\par
+{\pntext\f3\'B7\tab}PPP\par
+{\pntext\f3\'B7\tab}SSL\par
+{\pntext\f3\'B7\tab}Custom Bootup logo\par
+{\pntext\f3\'B7\tab}In field update\par
+{\pntext\f3\'B7\tab}Enabling application protection\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf6\f1\par
+Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350 _____________________________________________________________________________\par
+\par
+\cf5\b USBizi\par
+\par
+\cf6\b0 Release Info\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 First Beta release\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6 Planned Features for Next Releases\par
+\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0 USB Client (slave) extensions\par
+{\pntext\f3\'B7\tab}CAN\par
+{\pntext\f3\'B7\tab}Watchdog\par
+{\pntext\f3\'B7\tab}SPI Busy pin\par
+{\pntext\f3\'B7\tab}PWM with more resolution for duty cyle\par
+{\pntext\f3\'B7\tab}Battery RAM\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\cf6\f1 Known Issues\par
+\cf5\f2\par
+\pard{\pntext\f3\'B7\tab}{\*\pn\pnlvlblt\pnf3\pnindent0{\pntxtb\'B7}}\fi-360\li360\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf0\f0 Storage memory (SD, USB) over 4GB are not supported in this release\par
+{\pntext\f3\'B7\tab}Level interrupts are not supported in this release\par
+{\pntext\f3\'B7\tab}USBizi does not support serialization and cryptography\par
+\pard\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\par
+\par
+\par
+\par
+\pard\qc\tx4500\tx4680\tx5490\tx5850\tx6210\tx6300\tx6390\tx6840\tx7020\tx7470\tx7830\tx7920\tx8010\tx8100\tx8370\tx10350\cf2\b\fs24\par
+\par
+}
+ 
