@@ -16,7 +16,6 @@ namespace GadgeteerApp1
     public partial class Program : Gadgeteer.Program
     {
         // GTM.Module defintions
-		Gadgeteer.Modules.Seeed.GPS gps;
 		Gadgeteer.Modules.GHIElectronics.Display_T35 display;
 		Gadgeteer.Modules.GHIElectronics.Camera camera;
 		Gadgeteer.Modules.GHIElectronics.Button button;
@@ -49,8 +48,6 @@ namespace GadgeteerApp1
 			button = new GTM.GHIElectronics.Button(9);
 		
 			display = new GTM.GHIElectronics.Display_T35(14, 13, 12, 10);
-		
-			gps = new GTM.Seeed.GPS(11);
 
         }
     }
