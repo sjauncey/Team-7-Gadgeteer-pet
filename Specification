@@ -1,0 +1,31 @@
+Specification
+
+Our project is to build a .NET Gadgeteer pet. 
+This pet will navigate a maze by either texted directions or automatically solving the maze. 
+The pet will take the form of a Rat, and will ultilise a camera to detect a maze drawn on the floor or table and use two motorised wheels and a caster wheel in the front. 
+
+
+The hardware
+
+The rat will consist of the mainboard, connected to the following components:
+A camera, to see the maze.
+LEDs, to illumnate the floor to make the image recognition easier.
+A GSM module, to recieve directions when in the directed solving state.
+A Screen, to display what instruction is currrently being run, and more information.
+A Button to indicate a reset.
+Relays, to run the motors to the wheels.
+
+The software
+
+We will develop one central model for the rat. 
+This will be responsible for storing the current mode of the rat (SMS Instruction Mode or Auto Solve Mode).
+The model will be reposnible for reseting the rats state. 
+It will store the phone numbers of the current controller and the phones that are allowed to send reset commands.
+
+The other components will be:
+GSM Controller, recieves texts and parses them into instructions, passes these to the model.
+Camera Controller, recieves bitmaps and proccess them to see if the walls or start/end tokens are visible. We will do this with simple edge detection over the images. We may need to optimise the edge detection fairly heavily in order to achieve the speed needed to process the maze in real time.
+Screen, takes the current command and shows it on the scren. We will also use the screen to display errors in syntax of recieved messages.
+Motor Controller, takes the current command, runs the motors in order to carry it out. It also listens to the gyro in order to decide what angle it has turned through and how far it has moved. The motor controller will be reposnisble for ensuring it travels the distance desired, and will inform the model once it has completed its task in order to be given another one.
+Map Memory Class, builds an internal representation of the external maze, and uses this to ssue instructions in order to explore the physical maze and attempt to solve it. Once it has a full picture of the maze, it can will be able to calculate optimal solutions.
+Timer Class, will time maze solving attempts and will keep a leaderboard of who has solved the maze the fastest time for that session.
