@@ -6,6 +6,7 @@ using GT = Gadgeteer;
 using GTM = Gadgeteer.Modules;
 using Gadgeteer.Modules.Seeed;
 using Gadgeteer.Modules.GHIElectronics;
+using System.Collections;
 
 namespace GadgeteerApp1
 {
@@ -26,7 +27,7 @@ namespace GadgeteerApp1
                 char[] delims = { ' ', ',', '.', ':', '\t', '\n' };
                 string[] words = message.TextMessage.ToUpper().Split(delims);
 
-                SPORK[] instructions = new SPORK[words.Length / 2];
+                Queue instructions = new Queue();
                 int i = 0;
                 //Using i+1 here to ensure we don't get an error when we look at words[i+1]
                 while (i + 1 < words.Length)
@@ -36,15 +37,15 @@ namespace GadgeteerApp1
                         switch (words[i])
                         {
                             case "FORWARD":
-                                instructions[i / 2] = new SPORK(Instruction.FORWARD, Convert.ToInt16(words[i + 1]));
+                                instructions.Enqueue(new SPORK(Instruction.FORWARD, Convert.ToInt16(words[i + 1])));
                                 i += 2;
                                 break;
                             case "LEFT":
-                                instructions[i / 2] = new SPORK(Instruction.LEFT, Convert.ToInt16(words[i + 1]));
+                                 instructions.Enqueue(new SPORK(Instruction.LEFT, Convert.ToInt16(words[i + 1])));
                                 i += 2;
                                 break;
                             case "RIGHT":
-                                instructions[i / 2] = new SPORK(Instruction.RIGHT, Convert.ToInt16(words[i + 1]));
+                                 instructions.Enqueue(new SPORK(Instruction.RIGHT, Convert.ToInt16(words[i + 1])));
                                 i += 2;
                                 break;
                             case "FW":

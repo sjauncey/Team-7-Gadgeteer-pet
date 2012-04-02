@@ -46,12 +46,11 @@ namespace GadgeteerApp1
             cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(smsController.smsHandler);
         }
 
-        internal void addSPORKS(SPORK[] sporks)
+        internal void addSPORKS(Queue sporks)
         {
             foreach (SPORK s in sporks)
             {
-                if (s != null)
-                    SPORKQueue.Enqueue(s);
+                 SPORKQueue.Enqueue(s);
             }
         }
 

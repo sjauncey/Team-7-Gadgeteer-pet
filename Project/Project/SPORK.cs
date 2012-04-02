@@ -9,7 +9,7 @@ namespace GadgeteerApp1
         LEFT,
         RIGHT
     }
-    class SPORK
+    struct SPORK
     {
 
         private Instruction instruction;
