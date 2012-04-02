@@ -9,8 +9,16 @@ using Gadgeteer.Modules.GHIElectronics;
 
 namespace GadgeteerApp1
 {
+
     class SMS
     {
+        Program model;
+
+        public SMS(Program model)
+        {
+            this.model = model;
+        }
+
         public void smsHandler(CellularRadio sender, CellularRadio.Sms message)
         {
             if (message.TelephoneNumber != "0")
@@ -21,7 +29,7 @@ namespace GadgeteerApp1
                 SPORK[] instructions = new SPORK[words.Length / 2];
                 int i = 0;
                 //Using i+1 here to ensure we don't get an error when we look at words[i+1]
-                while (i+1 < words.Length)
+                while (i + 1 < words.Length)
                 {
                     try
                     {
@@ -69,6 +77,8 @@ namespace GadgeteerApp1
                     //Replace errors with local handling, displaying messages on the screen for example.
                     //words[i] will contain the faulty word.
                 }
+
+                model.addSPORKS(instructions);
             }
         }
     }

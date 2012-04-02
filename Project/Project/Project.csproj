@@ -42,6 +42,8 @@
   <!-- Everything below here is custom to .NET MF / Gadgeteer template-->
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
+    <Compile Include="MovementController.cs" />
+    <Compile Include="SPORK.cs" />
     <Compile Include="SMS.cs" />
     <Compile Include="Program.generated.cs">
       <AutoGen>True</AutoGen>

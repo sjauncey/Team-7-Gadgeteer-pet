@@ -15,53 +15,14 @@ using Gadgeteer.Modules.GHIElectronics;
 
 namespace GadgeteerApp1
 {
-    enum Instruction
-    {
-        FORWARD,
-        LEFT,
-        RIGHT
-    }
-    struct SPORK
-    {
-        public Instruction instruction;
-        public int parameter;
-
-        public SPORK(Instruction inst, int param)
-        {
-            switch (inst)
-            {
-                case Instruction.FORWARD:
-                    instruction = inst;
-                    parameter = param;
-                    break;
-                case Instruction.RIGHT:
-                    param = param % 360;
-                    if(param < 180){
-                        instruction = Instruction.RIGHT;
-                        parameter = param;
-                    } else {
-                        instruction = Instruction.LEFT;
-                        parameter = 360-param;
-                    }
-                    break;
-                case Instruction.LEFT:
-                    param = param % 360;
-                    if(param < 180){
-                        instruction = Instruction.LEFT;
-                        parameter = param;
-                    } else {
-                        instruction = Instruction.RIGHT;
-                        parameter = 360-param;
-                    }
-                    break;    
-                default:
-                    throw new NotSupportedException();
-            }
-        }
-    }
 
     public partial class Program
     {
+
+        Queue SPORKQueue = new Queue();
+        MovementController movementController;
+        SMS smsController;
+        bool stationary = true;
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
@@ -80,10 +41,31 @@ namespace GadgeteerApp1
 
             // Use Debug.Print to show messages in Visual Studio's "Output" window during debugging.
             Debug.Print("Program Started");
-
-            cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(SMS.smsHandler());
+            smsController = new SMS(this);
+            movementController = new MovementController();
+            cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(smsController.smsHandler);
         }
 
-        
+        internal void addSPORKS(SPORK[] sporks)
+        {
+            foreach (SPORK s in sporks)
+            {
+                if (s != null)
+                    SPORKQueue.Enqueue(s);
+            }
+        }
+
+        internal void movementFinished()
+        {
+            if (SPORKQueue.Count != 0)
+            {
+                //send a new instruction
+
+            }
+            else
+            {
+                stationary = true;
+            }
+        }
     }
 }
