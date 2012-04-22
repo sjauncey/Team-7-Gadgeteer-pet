@@ -27,7 +27,7 @@ namespace GadgeteerApp1
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
-            Debug = new Debug2(oledDisplay);
+            Debug = new Debug2(oledDisplay, cellularRadio);
             /*******************************************************************************************
             Modules added in the Program.gadgeteer designer view are used by typing 
             their name followed by a period, e.g.  button.  or  camera.

@@ -42,6 +42,7 @@
   <!-- Everything below here is custom to .NET MF / Gadgeteer template-->
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
+    <Compile Include="ImageRec.cs" />
     <Compile Include="Debug2.cs" />
     <Compile Include="MovementController.cs" />
     <Compile Include="SPORK.cs" />
