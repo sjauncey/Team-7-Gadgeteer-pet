@@ -6,11 +6,10 @@ using Microsoft.SPOT;
 namespace GadgeteerApp1
 {
     class ImageRec {
-        const int TIMERINTERVAL = 1000;
         GTM.GHIElectronics.Camera camera;
         public ImageRec(GTM.GHIElectronics.Camera camera) { 
 
-            GT.Timer timer = new GT.Timer(TIMERINTERVAL);
+            GT.Timer timer = new GT.Timer(1000);
             timer.Tick += new GT.Timer.TickEventHandler(timer_Tick);
 
             this.camera = camera;
