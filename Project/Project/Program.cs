@@ -27,32 +27,18 @@ namespace GadgeteerApp1
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
-            Debug = new Debug2(oledDisplay, cellularRadio);
-            /*******************************************************************************************
-            Modules added in the Program.gadgeteer designer view are used by typing 
-            their name followed by a period, e.g.  button.  or  camera.
-            
-            Many modules generate useful events. Type +=<tab><tab> to add a handler to an event, e.g.:
-                button.ButtonPressed +=<tab><tab>
-            
-            If you want to do something periodically, use a GT.Timer and handle its Tick event, e.g.:
-                GT.Timer timer = new GT.Timer(1000); // every second (1000ms)
-                timer.Tick +=<tab><tab>
-                timer.Start();
-            *******************************************************************************************/
+            Debug = Debug2.Instance;
+            Debug.setCellRadio(cellularRadio);
+            Debug.setOled(oledDisplay);
 
-            // Use Debug.Print to show messages in Visual Studio's "Output" window during debugging.
             Debug.Print("Program Started");
             smsController = new SMS(this);
             movementController = new MovementController();
+
+            camera.CurrentPictureResolution = Camera.PictureResolution.Resolution160x120;
+
             cellularRadio.PowerOn();
-
-            cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
-        }
-
-        void cellularRadio_SmsReceived(CellularRadio sender, CellularRadio.Sms message)
-        {
-            Debug.Print(message.TextMessage);
+            cellularRadio.SmsReceived += smsController.smsHandler;
         }
 
         internal void addSPORKS(Queue sporks)
@@ -60,6 +46,10 @@ namespace GadgeteerApp1
             foreach (SPORK s in sporks)
             {
                  SPORKQueue.Enqueue(s);
+            }
+            if (stationary)
+            { 
+
             }
         }
 
