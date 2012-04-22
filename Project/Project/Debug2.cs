@@ -14,12 +14,24 @@ namespace GadgeteerApp1
         private string previousDebugMsg, currentDebugMsg, oldestDebugMsg;
         GT.Modules.Seeed.CellularRadio.SignalStrengthType signalStrength = new GT.Modules.Seeed.CellularRadio.SignalStrengthType();
         private GT.Timer signalStrengthCheck;
-        
 
-        public Debug2(Gadgeteer.Modules.Seeed.OledDisplay oled, Gadgeteer.Modules.Seeed.CellularRadio radio)
+        private static Debug2 instance;
+
+        public static Debug2 Instance
         {
-            this.oled = oled;
-            this.radio = radio;
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Debug2();
+                }
+                return Instance;
+            }
+
+        }
+
+        public Debug2()
+        {
             this.oledH = oled.Height;
             this.oledW = oled.Width;
             currentDebugMsg = ""; previousDebugMsg = ""; oldestDebugMsg="";
@@ -29,6 +41,16 @@ namespace GadgeteerApp1
             signalStrengthCheck.Tick += new GT.Timer.TickEventHandler(signalStrengthCheck_Tick);
             radio.SignalStrengthRetrieved += new GT.Modules.Seeed.CellularRadio.SignalStrengthRetrievedHandler(radio_SignalStrengthRetrieved);
 
+        }
+
+        public void setOled(Gadgeteer.Modules.Seeed.OledDisplay oled)
+        {
+            this.oled = oled;
+        }
+
+        public void setCellRadio(Gadgeteer.Modules.Seeed.CellularRadio radio)
+        {
+            this.radio = radio;
         }
 
         void radio_SignalStrengthRetrieved(GT.Modules.Seeed.CellularRadio sender, GT.Modules.Seeed.CellularRadio.SignalStrengthType signalStrength)

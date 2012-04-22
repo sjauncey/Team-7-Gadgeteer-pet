@@ -13,11 +13,11 @@ namespace GadgeteerApp1
 
     class SMS
     {
-        Program model;
+        Program program;
 
-        public SMS(Program model)
+        public SMS(Program program)
         {
-            this.model = model;
+            this.program = program;
         }
 
         public void smsHandler(CellularRadio sender, CellularRadio.Sms message)
@@ -58,28 +58,22 @@ namespace GadgeteerApp1
                                 words[i] = "RIGHT";
                                 break;
                             default:
-                                throw new NotSupportedException();
+                                throw new Exception();
 
                         }
                     }
                     catch (Exception e)
                     {
-                        //we better throw and error here, or whatever is the most efficient way to deal with errors.
-                        //Would a custom error reporting module be best? Can print to the oled?
-                        //error is in words[i+1]
+                        Debug2.Instance.Print("Error Parsing Commands. Error in: '" + words[i+1] + "' after '" + words[i]);
                     }
                 }
 
                 if (i < words.Length)
                 {
-                    //Then we stopped before looking at the last word. Better throw and error.
-                    throw new NotSupportedException();
-                    //We need a better way of handling badly formatted messages.
-                    //Replace errors with local handling, displaying messages on the screen for example.
-                    //words[i] will contain the faulty word.
+                    Debug2.Instance.Print("Error Parsing Commands. Error in: '" + words[i] + "'");
                 }
 
-                model.addSPORKS(instructions);
+                program.addSPORKS(instructions);
             }
         }
     }
