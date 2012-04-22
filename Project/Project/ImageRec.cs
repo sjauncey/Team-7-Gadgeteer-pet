@@ -22,11 +22,22 @@ namespace GadgeteerApp1
         {
             Bitmap bmp = picture.MakeBitmap();
 
-
-            if (bmp.GetPixel(1, 1) == GT.Color.Black && bmp.GetPixel(159,1) == GT.Color.Black)
+            
+            if (isBlack(bmp.GetPixel(1, 1)) && isBlack(bmp.GetPixel(159, 1)))
             {
-                // do something
+                Debug2.Instance.Print("Yes, black");
             }
+            else
+            {
+                Debug2.Instance.Print("No, not black");
+            }
+        }
+
+        bool isBlack(GT.Color col) {
+            if (col.B < 20 && col.G < 20 && col.R < 20) {
+                return true;
+            }
+            else { return false; }
         }
 
         void timer_Tick(GT.Timer timer)
