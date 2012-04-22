@@ -14,7 +14,7 @@ using Gadgeteer.Modules.GHIElectronics;
 using Gadgeteer.Modules.Seeed;
 
 
-namespace GadgeteerApp1
+namespace ScreenDebugTest
 {
     public partial class Program
     {

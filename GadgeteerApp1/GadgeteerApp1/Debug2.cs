@@ -2,7 +2,7 @@ using System;
 using Microsoft.SPOT;
 using GT = Gadgeteer;
 
-namespace GadgeteerApp1
+namespace ScreenDebugTest
 {
     public class Debug2
     {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadgeteerApp1", "GadgeteerApp1\GadgeteerApp1.csproj", "{284DA1B7-6028-4153-B5A4-34ED9CFF742A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenDebugTest", "GadgeteerApp1\ScreenDebugTest.csproj", "{284DA1B7-6028-4153-B5A4-34ED9CFF742A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

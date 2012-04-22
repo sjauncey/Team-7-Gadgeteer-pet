@@ -83,7 +83,7 @@
         <socketShapeMoniker Id="2e1eeee7-9cb9-4e37-9f15-5eb5e9671890" />
       </nodes>
     </socketConnector>
-    <socketConnector Id="8aa5c1e0-c774-4c7f-a5ac-160ace5cd02c" edgePoints="[(6.38122047598862 : 5.805); (8.385 : 5.805); (8.385 : 3.74122047598862)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <socketConnector Id="8aa5c1e0-c774-4c7f-a5ac-160ace5cd02c" edgePoints="[(6.38122047598862 : 5.805); (8.385 : 5.805); (8.385 : 3.74122047598862)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <socketUseReferencesSocketMoniker Id="dc8497ea-961d-4a06-8004-bb2b7c754d1f" />
       <nodes>
         <socketUseShapeMoniker Id="f852e6a3-9bb4-4a3b-aa52-82db3a79886b" />

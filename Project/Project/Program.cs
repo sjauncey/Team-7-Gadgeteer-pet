@@ -45,49 +45,14 @@ namespace GadgeteerApp1
             Debug.Print("Program Started");
             smsController = new SMS(this);
             movementController = new MovementController();
-            led.TurnWhite();
-            led1.TurnWhite();
             cellularRadio.PowerOn();
-           // GT.Timer t = new GT.Timer(40000, GT.Timer.BehaviorType.RunOnce);
-           // t.Tick += new GT.Timer.TickEventHandler(t_Tick);
-           // cellularRadio.SignalStrengthRetrieved += new CellularRadio.SignalStrengthRetrievedHandler(cellularRadio_SignalStrengthRetrieved);
+
             cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
         }
 
         void cellularRadio_SmsReceived(CellularRadio sender, CellularRadio.Sms message)
         {
             Debug.Print(message.TextMessage);
-        }
-
-        void cellularRadio_SignalStrengthRetrieved(CellularRadio sender, CellularRadio.SignalStrengthType signalStrength)
-        {
-            switch (signalStrength)
-            {
-                case CellularRadio.SignalStrengthType.VeryWeak:
-                    Debug.Print("Very Weak");
-                    break;
-                case CellularRadio.SignalStrengthType.Weak:
-                    Debug.Print("Weak");
-                    break;
-                case CellularRadio.SignalStrengthType.Strong:
-                    Debug.Print("Strong");
-                    break;
-                case CellularRadio.SignalStrengthType.VeryStrong:
-                    Debug.Print("Very Strong");
-                    break;
-                default:
-                    Debug.Print("Undefined Strength");
-                    break;
-            }
-
-            cellularRadio.RetrieveSignalStrength();
-        }
-
-        void t_Tick(GT.Timer timer)
-        {
-            //takes 40 seconds to power up, then more time to actually pick up a signal
-            Debug.Print("Asking for a signal strenght");
-            cellularRadio.RetrieveSignalStrength();
         }
 
         internal void addSPORKS(Queue sporks)
@@ -102,6 +67,7 @@ namespace GadgeteerApp1
         {
             if (SPORKQueue.Count != 0)
             {
+                stationary = false;
                 //send a new instruction
 
             }

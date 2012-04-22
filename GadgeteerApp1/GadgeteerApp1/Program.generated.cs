@@ -11,31 +11,31 @@
 using Gadgeteer;
 using GTM = Gadgeteer.Modules;
 
-namespace GadgeteerApp1
+namespace ScreenDebugTest
 {
     public partial class Program : Gadgeteer.Program
     {
-        // GTM.Module defintions
-		Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClient;
-		Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
+        // GTM.Module definitions
+        Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClient;
+        Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
 
-		public static void Main()
+        public static void Main()
         {
-			//Important to initialize the Mainboard first
+            //Important to initialize the Mainboard first
             Mainboard = new GHIElectronics.Gadgeteer.FEZSpider();			
 
             Program program = new Program();
-			program.InitializeModules();
+            program.InitializeModules();
             program.ProgramStarted();
             program.Run(); // Starts Dispatcher
         }
 
         private void InitializeModules()
         {   
-			// Initialize GTM.Modules and event handlers here.		
-			usbClient = new GTM.GHIElectronics.UsbClientDP(1);
+            // Initialize GTM.Modules and event handlers here.		
+            usbClient = new GTM.GHIElectronics.UsbClientDP(1);
 		
-			oledDisplay = new GTM.Seeed.OledDisplay(6);
+            oledDisplay = new GTM.Seeed.OledDisplay(6);
 
         }
     }
