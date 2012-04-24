@@ -15,7 +15,10 @@ namespace GadgeteerApp1
         GT.Modules.Seeed.CellularRadio.SignalStrengthType signalStrength = new GT.Modules.Seeed.CellularRadio.SignalStrengthType();
         private GT.Timer signalStrengthCheck;
 
+        private Bitmap imageUp, imageLeft, imageRight, imageDown;
+
         private static Debug2 instance;
+        private bool oledDebugEnabled;
 
         public static Debug2 Instance
         {
@@ -25,32 +28,45 @@ namespace GadgeteerApp1
                 {
                     instance = new Debug2();
                 }
-                return Instance;
+                return instance;
             }
 
         }
 
         public Debug2()
         {
-            this.oledH = oled.Height;
-            this.oledW = oled.Width;
+
             currentDebugMsg = ""; previousDebugMsg = ""; oldestDebugMsg="";
             signalStrength = GT.Modules.Seeed.CellularRadio.SignalStrengthType.Error;
 
             signalStrengthCheck = new GT.Timer(10000);
             signalStrengthCheck.Tick += new GT.Timer.TickEventHandler(signalStrengthCheck_Tick);
-            radio.SignalStrengthRetrieved += new GT.Modules.Seeed.CellularRadio.SignalStrengthRetrievedHandler(radio_SignalStrengthRetrieved);
 
+            DisableScreenDebug();
+
+            imageUp = Resources.GetBitmap(Resources.BitmapResources.up);
+            imageLeft = Resources.GetBitmap(Resources.BitmapResources.left);
+            imageRight = Resources.GetBitmap(Resources.BitmapResources.right);
+            imageDown = Resources.GetBitmap(Resources.BitmapResources.down);
+
+        }
+
+        private void DisableScreenDebug()
+        {
+            oledDebugEnabled = false;
         }
 
         public void setOled(Gadgeteer.Modules.Seeed.OledDisplay oled)
         {
             this.oled = oled;
+            this.oledH = oled.Height;
+            this.oledW = oled.Width;
         }
 
         public void setCellRadio(Gadgeteer.Modules.Seeed.CellularRadio radio)
         {
             this.radio = radio;
+            radio.SignalStrengthRetrieved += new GT.Modules.Seeed.CellularRadio.SignalStrengthRetrievedHandler(radio_SignalStrengthRetrieved);
         }
 
         void radio_SignalStrengthRetrieved(GT.Modules.Seeed.CellularRadio sender, GT.Modules.Seeed.CellularRadio.SignalStrengthType signalStrength)
@@ -58,7 +74,7 @@ namespace GadgeteerApp1
             this.signalStrength = signalStrength;
             if (signalStrengthCheck.IsRunning)
             {
-                DrawSignalStrength();
+                Print("Singal strength is " + signalStrength);
             }
         }
 
@@ -66,8 +82,8 @@ namespace GadgeteerApp1
         {
             if (radio.RetrieveSignalStrength() == GT.Modules.Seeed.CellularRadio.ReturnedState.ModuleIsOff)
             {
-                Print("Cell Module is off, disabling signal strength indicator");
-                signalStrengthCheck.Stop();
+               // Print("Cell Module is off, disabling signal strength indicator");
+               // signalStrengthCheck.Stop();
             }
         }
 
@@ -77,42 +93,52 @@ namespace GadgeteerApp1
             oldestDebugMsg = previousDebugMsg;
             previousDebugMsg = currentDebugMsg;
             currentDebugMsg = s;
-            RedrawDebugs();
+            if (oledDebugEnabled)
+            {
+                RedrawDebugs();
+            }
 
         }
 
-        public void RedrawDebugs()
+        private void RedrawDebugs()
         {
             oled.SimpleGraphics.Clear();
             oled.SimpleGraphics.DisplayTextInRectangle(oldestDebugMsg, 0, 3, oledW, oledH / 3, GT.Color.Red, Resources.GetFont(Resources.FontResources.small));
             oled.SimpleGraphics.DisplayTextInRectangle(previousDebugMsg, 0, 2 + (oledH / 3), oledW, (2 / 3) * oledH, GT.Color.Red, Resources.GetFont(Resources.FontResources.small));
             oled.SimpleGraphics.DisplayTextInRectangle(currentDebugMsg, 0, 2 + (2 * oledH / 3), oledW, oledH, GT.Color.Red, Resources.GetFont(Resources.FontResources.small));
+            DrawSignalStrength();
+        }
+
+        public void EnableScreenDebug()
+        {
+            oledDebugEnabled = true;
         }
 
         public void DrawSignalStrength() 
         {
-            oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 0, GT.Color.Black, 0, 0, oledW, 5);
+            oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 0, GT.Color.Black, 87, 0, 40, 5);
             switch (signalStrength)
             {
                 case GT.Modules.Seeed.CellularRadio.SignalStrengthType.VeryStrong:
-                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 0, 0, oledW, 5);
+                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 87, 0, 40, 5);
                     goto case GT.Modules.Seeed.CellularRadio.SignalStrengthType.Strong;
                 case GT.Modules.Seeed.CellularRadio.SignalStrengthType.Strong:
-                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 0, 0, (3 / 4) * oledW, 5);
+                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 97, 0, 30, 5);
                     goto case GT.Modules.Seeed.CellularRadio.SignalStrengthType.Weak;
                 case GT.Modules.Seeed.CellularRadio.SignalStrengthType.Weak:
-                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 0, 0, (2 / 4) * oledW, 5);
+                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 107, 0, 20, 5);
                     goto case GT.Modules.Seeed.CellularRadio.SignalStrengthType.VeryWeak;
                 case GT.Modules.Seeed.CellularRadio.SignalStrengthType.VeryWeak:
-                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 0, 0, (2 / 4) * oledW, 5);
+                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Orange, 117, 0, 10, 5);
                     break;
                 case GT.Modules.Seeed.CellularRadio.SignalStrengthType.Error:
-                    oled.SimpleGraphics.DisplayTextInRectangle("Error", 0, 0, oledW, 5, GT.Color.White, Resources.GetFont(Resources.FontResources.small));
+                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.Red, 87, 0, 40, 5);
                     break;
                 case GT.Modules.Seeed.CellularRadio.SignalStrengthType.Unknown:
-                    oled.SimpleGraphics.DisplayTextInRectangle("Unknown Strength", 0, 0, oledW, 5, GT.Color.White, Resources.GetFont(Resources.FontResources.small));
+                    oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 1, GT.Color.LightGray, 87, 0, 40, 5);
                     break;
-            } 
+            }
+             
         }
 
         public void EnableSignalStrengthIndicator()
@@ -123,6 +149,31 @@ namespace GadgeteerApp1
         public void DisableSignalStrengthIndicator()
         {
             signalStrengthCheck.Stop();
+            oled.SimpleGraphics.DisplayRectangle(GT.Color.Black, 0, GT.Color.Black, 87, 0, 40, 10);
+        }
+
+        public void showUp()
+        {
+            oled.SimpleGraphics.Clear();
+            oled.SimpleGraphics.DisplayImage(imageUp, 14, 14);
+        }
+
+        public void showLeft()
+        {
+            oled.SimpleGraphics.Clear();
+            oled.SimpleGraphics.DisplayImage(imageLeft, 14, 14);
+        }
+
+        public void showRight()
+        {
+            oled.SimpleGraphics.Clear();
+            oled.SimpleGraphics.DisplayImage(imageRight, 14, 14);
+        }
+
+        public void showDown()
+        {
+            oled.SimpleGraphics.Clear();
+            oled.SimpleGraphics.DisplayImage(imageDown, 14, 14);
         }
 
 
