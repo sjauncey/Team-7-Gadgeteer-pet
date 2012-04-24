@@ -67,7 +67,7 @@ namespace GadgeteerApp1
                 right[k] = right[k] / 3;
             }
 
-            if (isBlack(left) && isBlack(centre) && isBlack(right) { return true; } else { return false; }
+            if (isBlack(left) && isBlack(centre) && isBlack(right)) { return true; } else { return false; }
                                   
         }
 

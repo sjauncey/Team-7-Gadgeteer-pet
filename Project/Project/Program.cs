@@ -31,28 +31,26 @@ namespace GadgeteerApp1
             Debug = Debug2.Instance;
             Debug.setCellRadio(cellularRadio);
             Debug.setOled(oledDisplay);
-            Debug.EnableSignalStrengthIndicator();
+            //Debug.EnableSignalStrengthIndicator(); //Displays the signal strength in the top right hand corner of the screen
             Debug.EnableScreenDebug();
 
             Debug.Print("Program Started");
-            smsController = new SMS(this);
+            //smsController = new SMS(this);
             movementController = new MovementController();
 
             camera.CurrentPictureResolution = Camera.PictureResolution.Resolution160x120;
 
-
             cellularRadio.PowerOn();
             button1.TurnLEDOn();
-
             button1.ButtonPressed += new Button.ButtonEventHandler(button1_ButtonPressed);
-            smsController.smsHandler(cellularRadio, new CellularRadio.Sms("07772275081","LEFT 90 FORWARD 20 RIGHT 180", CellularRadio.SmsState.All, new DateTime()));
 
-            cellularRadio.OperatorRetrieved += new CellularRadio.OperatorRetrievedHandler(cellularRadio_OperatorRetrieved);
-            GT.Timer smscheck = new GT.Timer(10000);
-            smscheck.Tick += new GT.Timer.TickEventHandler(smscheck_Tick);
+            //smsController.smsHandler(cellularRadio, new CellularRadio.Sms("07772275081","LEFT 90 FORWARD 20 RIGHT 180", CellularRadio.SmsState.All, new DateTime()));
+            //cellularRadio.OperatorRetrieved += new CellularRadio.OperatorRetrievedHandler(cellularRadio_OperatorRetrieved);
+            //GT.Timer smscheck = new GT.Timer(10000);
+            //smscheck.Tick += new GT.Timer.TickEventHandler(smscheck_Tick);
             //cellularRadio.SmsListRetrieved += new CellularRadio.SmsListRetrievedHandler(cellularRadio_SmsListRetrieved);
-            cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
-            smscheck.Start();
+            //cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
+            //smscheck.Start();
 
         }
 
