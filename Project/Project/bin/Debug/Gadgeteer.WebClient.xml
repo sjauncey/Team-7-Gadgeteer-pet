@@ -4,165 +4,6 @@
         <name>Gadgeteer.WebClient</name>
     </assembly>
     <members>
-        <member name="T:Gadgeteer.Networking.HttpContent">
-            <summary>
-             Abstract class used to handle different types for http content.
-            </summary>
-        </member>
-        <member name="M:Gadgeteer.Networking.HttpContent.StringToByte(System.String)">
-            <summary>
-             Helper method to create a byte array containing string data.
-            </summary>
-        </member>
-        <member name="T:Gadgeteer.Networking.POSTContent">
-            <summary>
-             Encapsulates the data and functionality required for Http POST requests.
-            </summary>
-        </member>
-        <member name="M:Gadgeteer.Networking.POSTContent.CreateWebFormData(System.Collections.IDictionary)">
-            <summary>
-             Create a <see cref="T:Gadgeteer.Networking.POSTContent"/> object, that is typically used for html forms. 
-            </summary>
-            <param name="keyValueParamaters">A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs for the http body.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.POSTContent"/> object encapsulating the key/value pairs as a byte array, formatted for POST requests.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.POSTContent.CreateTextBasedContent(System.String)">
-            <summary>
-            Create a <see cref="T:Gadgeteer.Networking.POSTContent"/> object, that includes text content, typically used for JSON, XML, or plan text.
-            </summary>
-            <param name="content">String data that will be sent to the server.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.POSTContent"/> object encapsulating the string data, formatted for POST requests.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.POSTContent.CreateBinaryBasedContent(System.Byte[])">
-            <summary>
-             Create a <see cref="T:Gadgeteer.Networking.POSTContent"/> object, that includes raw byte content.
-            </summary>
-            <param name="data">A byte[] array containing data to be sent to the server.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.POSTContent"/> object encapsulating the byte array data, formatted for POST requests.</returns>
-        </member>
-        <member name="T:Gadgeteer.Networking.GETContent">
-            <summary>
-             Encapsulates data and functionality required for Http GET request.
-            </summary>
-        </member>
-        <member name="M:Gadgeteer.Networking.GETContent.CreateGETParameterList(System.Collections.IDictionary)">
-            <summary>
-             Adds passed arguments to the Url so that they can be processed by the targeted server. 
-            </summary>
-            <param name="keyValueParameters">A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs that will be 
-            added to the request Url.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.GETContent"/> object encapsulating key/value pairs formatted for a GET request. </returns>
-        </member>
-        <member name="T:Gadgeteer.Networking.PUTContent">
-            <summary>
-             Encapsulates data and functionality required for an Http PUT request.
-            </summary>
-        </member>
-        <member name="M:Gadgeteer.Networking.PUTContent.CreateWebFormData(System.Collections.IDictionary)">
-            <summary>
-             Create a <see cref="T:Gadgeteer.Networking.PUTContent"/> object, that is typically used for html forms. 
-            </summary>
-            <param name="keyValuePairs">A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs for the http body.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.PUTContent"/> object encapsulating the key/value pairs as a byte array, formatted for PUT requests.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.PUTContent.CreateTextBasedContent(System.String)">
-            <summary>
-             Create a <see cref="T:Gadgeteer.Networking.PUTContent"/> object, that includes text content, typically used for JSON, XML, or plan text.
-            </summary>
-            <param name="content">String data that will be sent to the server.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.PUTContent"/> object encapsulating the string data, formatted for PUT requests.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.PUTContent.CreateBinaryBasedContent(System.Byte[])">
-            <summary>
-             Create a <see cref="T:Gadgeteer.Networking.PUTContent"/> object, that includes raw byte content.
-            </summary>
-            <param name="data">A byte[] array containing data to be sent to the server.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.PUTContent"/> object encapsulating the byte array data, formatted for PUT requests.</returns>
-        </member>
-        <member name="T:Gadgeteer.Networking.DELETEContent">
-            <summary>
-             Encapsulates data and functionality required for an Http DELETE request.
-            </summary>
-        </member>
-        <member name="M:Gadgeteer.Networking.DELETEContent.CreateDELETEParameterList(System.Collections.IDictionary)">
-            <summary>
-             Adds arguments to the URL so that these can be processed by the targeted server. 
-            </summary>
-            <param name="keyValueParameters">&gt;A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs that will be 
-            added to the request Url.</param>
-            <returns>A <see cref="T:Gadgeteer.Networking.DELETEContent"/> object encapsulating key/value pairs formatted for a DELETE request. </returns>
-        </member>
-        <member name="T:Gadgeteer.Networking.WebClient">
-            <summary>
-            Represents a Web Client used in a Microsoft .NET Gadgeteer application.
-            </summary>
-        </member>
-        <member name="M:Gadgeteer.Networking.WebClient.GetFromWeb(System.String)">
-            <summary>
-            Make an asynchronous (non-blocking) request for a web page. Use the ResponseReceived event of the returned 
-            HttpRequest object to obtain the actual web page.
-            </summary>
-            <param name="url">Url of the web page to get</param>
-            <returns>An HttpRequest object on success, null otherwise</returns>
-        </member>
-        <member name="P:Gadgeteer.Networking.WebClient.Proxy">
-            <summary>
-            Property to get or set the web proxy to use for this request.
-            </summary>
-        </member>
-        <member name="T:Gadgeteer.Networking.HttpHelper">
-            <summary>
-            Helper class to create <see cref="T:Gadgeteer.Networking.HttpRequest"/> objects that are configured for the various http request methods (GET, PUT etc)
-            </summary>
-        </member>
-        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpPutRequest(System.String,Gadgeteer.Networking.PUTContent,System.String)">
-            <summary>
-            Create an Http PUT request.
-            </summary>
-            <param name="Url">The Url of the web server to which the request will be sent.</param>
-            <param name="Content">The <see cref="T:Gadgeteer.Networking.PUTContent"/> object to be sent to the Url.</param>
-            <param name="ContentType">The MIME-Type of the message.</param>
-            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make PUT request.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpPostRequest(System.String,Gadgeteer.Networking.POSTContent,System.String)">
-            <summary>
-            Create an Http POST request.
-            </summary>
-            <param name="Url">The Url of the web server to which the request will be sent.</param>
-            <param name="Content">The <see cref="T:Gadgeteer.Networking.POSTContent"/> object to be sent to the Url.</param>
-            <param name="ContentType">The MIME-Type of the message.</param>
-            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make POST request.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpGetRequest(System.String,Gadgeteer.Networking.GETContent)">
-            <summary>
-            Create an Http GET request.
-            </summary>
-            <param name="Url">The Url of the web server to which the request will be sent.</param>
-            <param name="Content">The <see cref="T:Gadgeteer.Networking.GETContent"/> object to be sent to the Url.</param>
-            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make GET request.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpGetRequest(System.String)">
-            <summary>
-            Create an Http GET request.
-            </summary>
-            <param name="Url">The Url of the web server to which the request will be sent.</param>
-            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make GET request.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpDeleteRequest(System.String,Gadgeteer.Networking.DELETEContent)">
-            <summary>
-            Create an Http DELETE request.
-            </summary>
-            <param name="Url">The Url of the web server to which the request will be sent.</param>
-            <param name="Content">The <see cref="T:Gadgeteer.Networking.DELETEContent"/> object to be sent to the Url.</param>
-            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make DELETE request.</returns>
-        </member>
-        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpDeleteRequest(System.String)">
-            <summary>
-            Create an Http DELETE request.
-            </summary>
-            <param name="Url">The Url of the web server to which the request will be sent.</param>
-            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make DELETE request.</returns>
-        </member>
         <member name="T:Gadgeteer.Networking.HttpRequest">
             <summary>
              This class builds up a web request which can then be sent to the specified server.
@@ -355,6 +196,94 @@
             <param name="sender">The <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that raised the event</param>
             <param name="response">The <see cref="T:Gadgeteer.Networking.HttpResponse"/> object that the web server returned</param>
         </member>
+        <member name="T:Gadgeteer.Networking.HttpContent">
+            <summary>
+             Abstract class used to handle different types for http content.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.HttpContent.StringToByte(System.String)">
+            <summary>
+             Helper method to create a byte array containing string data.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Networking.POSTContent">
+            <summary>
+             Encapsulates the data and functionality required for Http POST requests.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.POSTContent.CreateWebFormData(System.Collections.IDictionary)">
+            <summary>
+             Create a <see cref="T:Gadgeteer.Networking.POSTContent"/> object, that is typically used for html forms. 
+            </summary>
+            <param name="keyValueParamaters">A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs for the http body.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.POSTContent"/> object encapsulating the key/value pairs as a byte array, formatted for POST requests.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.POSTContent.CreateTextBasedContent(System.String)">
+            <summary>
+            Create a <see cref="T:Gadgeteer.Networking.POSTContent"/> object, that includes text content, typically used for JSON, XML, or plan text.
+            </summary>
+            <param name="content">String data that will be sent to the server.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.POSTContent"/> object encapsulating the string data, formatted for POST requests.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.POSTContent.CreateBinaryBasedContent(System.Byte[])">
+            <summary>
+             Create a <see cref="T:Gadgeteer.Networking.POSTContent"/> object, that includes raw byte content.
+            </summary>
+            <param name="data">A byte[] array containing data to be sent to the server.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.POSTContent"/> object encapsulating the byte array data, formatted for POST requests.</returns>
+        </member>
+        <member name="T:Gadgeteer.Networking.GETContent">
+            <summary>
+             Encapsulates data and functionality required for Http GET request.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.GETContent.CreateGETParameterList(System.Collections.IDictionary)">
+            <summary>
+             Adds passed arguments to the Url so that they can be processed by the targeted server. 
+            </summary>
+            <param name="keyValueParameters">A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs that will be 
+            added to the request Url.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.GETContent"/> object encapsulating key/value pairs formatted for a GET request. </returns>
+        </member>
+        <member name="T:Gadgeteer.Networking.PUTContent">
+            <summary>
+             Encapsulates data and functionality required for an Http PUT request.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.PUTContent.CreateWebFormData(System.Collections.IDictionary)">
+            <summary>
+             Create a <see cref="T:Gadgeteer.Networking.PUTContent"/> object, that is typically used for html forms. 
+            </summary>
+            <param name="keyValuePairs">A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs for the http body.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.PUTContent"/> object encapsulating the key/value pairs as a byte array, formatted for PUT requests.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.PUTContent.CreateTextBasedContent(System.String)">
+            <summary>
+             Create a <see cref="T:Gadgeteer.Networking.PUTContent"/> object, that includes text content, typically used for JSON, XML, or plan text.
+            </summary>
+            <param name="content">String data that will be sent to the server.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.PUTContent"/> object encapsulating the string data, formatted for PUT requests.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.PUTContent.CreateBinaryBasedContent(System.Byte[])">
+            <summary>
+             Create a <see cref="T:Gadgeteer.Networking.PUTContent"/> object, that includes raw byte content.
+            </summary>
+            <param name="data">A byte[] array containing data to be sent to the server.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.PUTContent"/> object encapsulating the byte array data, formatted for PUT requests.</returns>
+        </member>
+        <member name="T:Gadgeteer.Networking.DELETEContent">
+            <summary>
+             Encapsulates data and functionality required for an Http DELETE request.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.DELETEContent.CreateDELETEParameterList(System.Collections.IDictionary)">
+            <summary>
+             Adds arguments to the URL so that these can be processed by the targeted server. 
+            </summary>
+            <param name="keyValueParameters">&gt;A <see cref="T:System.Collection.IDictionary"/> object containing key/value pairs that will be 
+            added to the request Url.</param>
+            <returns>A <see cref="T:Gadgeteer.Networking.DELETEContent"/> object encapsulating key/value pairs formatted for a DELETE request. </returns>
+        </member>
         <member name="T:Gadgeteer.Networking.HttpResponse">
             <summary>
             Encapsulates the data returned by the server.
@@ -414,6 +343,77 @@
             <summary>
             The URL requested. 
             </summary>
+        </member>
+        <member name="T:Gadgeteer.Networking.WebClient">
+            <summary>
+            Represents a Web Client used in a Microsoft .NET Gadgeteer application.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.WebClient.GetFromWeb(System.String)">
+            <summary>
+            Make an asynchronous (non-blocking) request for a web page. Use the ResponseReceived event of the returned 
+            HttpRequest object to obtain the actual web page.
+            </summary>
+            <param name="url">Url of the web page to get</param>
+            <returns>An HttpRequest object on success, null otherwise</returns>
+        </member>
+        <member name="P:Gadgeteer.Networking.WebClient.Proxy">
+            <summary>
+            Property to get or set the web proxy to use for this request.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Networking.HttpHelper">
+            <summary>
+            Helper class to create <see cref="T:Gadgeteer.Networking.HttpRequest"/> objects that are configured for the various http request methods (GET, PUT etc)
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpPutRequest(System.String,Gadgeteer.Networking.PUTContent,System.String)">
+            <summary>
+            Create an Http PUT request.
+            </summary>
+            <param name="Url">The Url of the web server to which the request will be sent.</param>
+            <param name="Content">The <see cref="T:Gadgeteer.Networking.PUTContent"/> object to be sent to the Url.</param>
+            <param name="ContentType">The MIME-Type of the message.</param>
+            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make PUT request.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpPostRequest(System.String,Gadgeteer.Networking.POSTContent,System.String)">
+            <summary>
+            Create an Http POST request.
+            </summary>
+            <param name="Url">The Url of the web server to which the request will be sent.</param>
+            <param name="Content">The <see cref="T:Gadgeteer.Networking.POSTContent"/> object to be sent to the Url.</param>
+            <param name="ContentType">The MIME-Type of the message.</param>
+            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make POST request.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpGetRequest(System.String,Gadgeteer.Networking.GETContent)">
+            <summary>
+            Create an Http GET request.
+            </summary>
+            <param name="Url">The Url of the web server to which the request will be sent.</param>
+            <param name="Content">The <see cref="T:Gadgeteer.Networking.GETContent"/> object to be sent to the Url.</param>
+            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make GET request.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpGetRequest(System.String)">
+            <summary>
+            Create an Http GET request.
+            </summary>
+            <param name="Url">The Url of the web server to which the request will be sent.</param>
+            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make GET request.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpDeleteRequest(System.String,Gadgeteer.Networking.DELETEContent)">
+            <summary>
+            Create an Http DELETE request.
+            </summary>
+            <param name="Url">The Url of the web server to which the request will be sent.</param>
+            <param name="Content">The <see cref="T:Gadgeteer.Networking.DELETEContent"/> object to be sent to the Url.</param>
+            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make DELETE request.</returns>
+        </member>
+        <member name="M:Gadgeteer.Networking.HttpHelper.CreateHttpDeleteRequest(System.String)">
+            <summary>
+            Create an Http DELETE request.
+            </summary>
+            <param name="Url">The Url of the web server to which the request will be sent.</param>
+            <returns>An <see cref="T:Gadgeteer.Networking.HttpRequest"/> object that can be used to make DELETE request.</returns>
         </member>
     </members>
 </doc>

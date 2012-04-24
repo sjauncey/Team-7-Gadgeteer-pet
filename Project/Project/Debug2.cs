@@ -51,6 +51,10 @@ namespace GadgeteerApp1
 
         }
 
+        public void displayImage(Bitmap bmp) {
+            oled.SimpleGraphics.DisplayImage(bmp, 0, 0);
+        }
+
         private void DisableScreenDebug()
         {
             oledDebugEnabled = false;
