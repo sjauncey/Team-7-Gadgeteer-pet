@@ -10,7 +10,7 @@
 
 namespace GadgeteerApp1
 {
-
+    
     internal partial class Resources
     {
         private static System.Resources.ResourceManager manager;
@@ -25,9 +25,20 @@ namespace GadgeteerApp1
                 return Resources.manager;
             }
         }
+        internal static Microsoft.SPOT.Bitmap GetBitmap(Resources.BitmapResources id)
+        {
+            return ((Microsoft.SPOT.Bitmap)(Microsoft.SPOT.ResourceUtility.GetObject(ResourceManager, id)));
+        }
         internal static Microsoft.SPOT.Font GetFont(Resources.FontResources id)
         {
             return ((Microsoft.SPOT.Font)(Microsoft.SPOT.ResourceUtility.GetObject(ResourceManager, id)));
+        }
+        [System.SerializableAttribute()]
+        internal enum BitmapResources : short
+        {
+            left = -6141,
+            right = -3458,
+            up = 19228,
         }
         [System.SerializableAttribute()]
         internal enum FontResources : short

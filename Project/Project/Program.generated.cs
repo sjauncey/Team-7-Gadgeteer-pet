@@ -16,12 +16,10 @@ namespace GadgeteerApp1
     public partial class Program : Gadgeteer.Program
     {
         // GTM.Module defintions
-		Gadgeteer.Modules.GHIElectronics.Display_T35 display;
-		Gadgeteer.Modules.GHIElectronics.Camera camera;
-		Gadgeteer.Modules.GHIElectronics.Button button;
 		Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClient;
-		Gadgeteer.Modules.GHIElectronics.SDCard sdCard;
-		Gadgeteer.Modules.Seeed.CellularRadio cellularRadio;
+		Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
+		Gadgeteer.Modules.Seeed.Relays relays;
+		Gadgeteer.Modules.Seeed.Compass compass;
 
 		public static void Main()
         {
@@ -39,15 +37,11 @@ namespace GadgeteerApp1
 			// Initialize GTM.Modules and event handlers here.		
 			usbClient = new GTM.GHIElectronics.UsbClientDP(1);
 		
-			camera = new GTM.GHIElectronics.Camera(3);
+			oledDisplay = new GTM.Seeed.OledDisplay(6);
 		
-			cellularRadio = new GTM.Seeed.CellularRadio(4);
+			relays = new GTM.Seeed.Relays(8);
 		
-			sdCard = new GTM.GHIElectronics.SDCard(5);
-		
-			button = new GTM.GHIElectronics.Button(9);
-		
-			display = new GTM.GHIElectronics.Display_T35(14, 13, 12, 10);
+			compass = new GTM.Seeed.Compass(10);
 
         }
     }

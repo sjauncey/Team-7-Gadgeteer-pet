@@ -16,6 +16,7 @@ namespace GadgeteerApp1
         private GT.Timer runTimer;
         private float latestPoll;
         private float localNorth, localEast, localSouth, localWest;
+        private int cutoff;
 
         public MovementController(Relays relayBoard, Compass compassBoard){
             relays = relayBoard;
@@ -45,7 +46,8 @@ namespace GadgeteerApp1
         }
 
         public void getNorth(){
-            localNorth = pollCompass(10);
+            float f = pollCompass();
+            if (345< f && 355 > f){ cutoff = 0;
         }
 
         public void allStop(){

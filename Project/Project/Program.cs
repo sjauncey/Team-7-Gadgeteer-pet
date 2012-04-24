@@ -19,10 +19,11 @@ namespace GadgeteerApp1
     public partial class Program
     {
 
-        Queue SPORKQueue = new Queue();
-        MovementController movementController;
-        SMS smsController;
+        //Queue SPORKQueue = new Queue();
+        //MovementController movementController;
+        //SMS smsController;
         bool stationary = true;
+        Display display;
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
@@ -41,11 +42,13 @@ namespace GadgeteerApp1
 
             // Use Debug.Print to show messages in Visual Studio's "Output" window during debugging.
             Debug.Print("Program Started");
-            smsController = new SMS(this);
-            movementController = new MovementController();
-            cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(smsController.smsHandler);
-        }
+            //smsController = new SMS(this);
+            //movementController = new MovementController();
+            //cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(smsController.smsHandler);
 
+            display = new Display(oledDisplay);
+        }
+        /*
         internal void addSPORKS(Queue sporks)
         {
             foreach (SPORK s in sporks)
@@ -65,6 +68,6 @@ namespace GadgeteerApp1
             {
                 stationary = true;
             }
-        }
+        }*/
     }
 }
