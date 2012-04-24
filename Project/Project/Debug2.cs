@@ -65,6 +65,7 @@ namespace GadgeteerApp1
             this.oled = oled;
             this.oledH = oled.Height;
             this.oledW = oled.Width;
+            Print("Screen is "+oledW+"X"+oledH);
         }
 
         public void setCellRadio(Gadgeteer.Modules.Seeed.CellularRadio radio)

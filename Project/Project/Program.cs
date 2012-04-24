@@ -32,17 +32,23 @@ namespace GadgeteerApp1
             Debug = Debug2.Instance;
             //Debug.setCellRadio(cellularRadio);
             Debug.setOled(oledDisplay);
+<<<<<<< HEAD
             //Debug.EnableSignalStrengthIndicator();
             //Debug.EnableScreenDebug();
 
             oledDisplay.SimpleGraphics.DisplayTextInRectangle("Testing",0,0,100,50,GT.Color.Black,Resources.GetFont(Resources.FontResources.small));
 
+=======
+            //Debug.EnableSignalStrengthIndicator(); //Displays the signal strength in the top right hand corner of the screen
+            Debug.EnableScreenDebug();
+>>>>>>> c4eff3d2276c5bd9d486a9ad91df3fbc16bf6bb3
 
             Debug.Print("Program Started");
-            smsController = new SMS(this);
+            //smsController = new SMS(this);
             movementController = new MovementController();
             imageRec = new ImageRec(camera, led);
 
+<<<<<<< HEAD
             button1.ButtonPressed += new Button.ButtonEventHandler(button1_ButtonPressed);
             
             /**
@@ -52,16 +58,29 @@ namespace GadgeteerApp1
             
 
             smsController.smsHandler(cellularRadio, new CellularRadio.Sms("07772275081","LEFT 90 FORWARD 20 RIGHT 180", CellularRadio.SmsState.All, new DateTime()));
+=======
+            camera.CurrentPictureResolution = Camera.PictureResolution.Resolution160x120;
 
-            cellularRadio.OperatorRetrieved += new CellularRadio.OperatorRetrievedHandler(cellularRadio_OperatorRetrieved);
-            GT.Timer smscheck = new GT.Timer(10000);
-            smscheck.Tick += new GT.Timer.TickEventHandler(smscheck_Tick);
+            cellularRadio.PowerOn();
+            button1.TurnLEDOn();
+            button1.ButtonPressed += new Button.ButtonEventHandler(button1_ButtonPressed);
+>>>>>>> c4eff3d2276c5bd9d486a9ad91df3fbc16bf6bb3
+
+            //smsController.smsHandler(cellularRadio, new CellularRadio.Sms("07772275081","LEFT 90 FORWARD 20 RIGHT 180", CellularRadio.SmsState.All, new DateTime()));
+            //cellularRadio.OperatorRetrieved += new CellularRadio.OperatorRetrievedHandler(cellularRadio_OperatorRetrieved);
+            //GT.Timer smscheck = new GT.Timer(10000);
+            //smscheck.Tick += new GT.Timer.TickEventHandler(smscheck_Tick);
             //cellularRadio.SmsListRetrieved += new CellularRadio.SmsListRetrievedHandler(cellularRadio_SmsListRetrieved);
+<<<<<<< HEAD
             cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
             smscheck.Start();
             */
 
             
+=======
+            //cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
+            //smscheck.Start();
+>>>>>>> c4eff3d2276c5bd9d486a9ad91df3fbc16bf6bb3
 
         }
 

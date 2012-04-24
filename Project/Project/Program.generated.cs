@@ -21,7 +21,6 @@ namespace GadgeteerApp1
 		Gadgeteer.Modules.Seeed.CellularRadio cellularRadio;
 		Gadgeteer.Modules.GHIElectronics.MulticolorLed led;
 		Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
-		Gadgeteer.Modules.GHIElectronics.MulticolorLed led1;
 		Gadgeteer.Modules.Seeed.Compass compass;
 		Gadgeteer.Modules.GHIElectronics.Button button1;
 
