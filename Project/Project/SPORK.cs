@@ -5,9 +5,9 @@ namespace GadgeteerApp1
 {
     enum Instruction
     {
-        FORWARD,
-        LEFT,
-        RIGHT
+        FORWARD ,
+        LEFT ,
+        RIGHT 
     }
     struct SPORK
     {
@@ -62,6 +62,21 @@ namespace GadgeteerApp1
         public int getParamter()
         {
             return parameter;
+        }
+
+        public override string ToString()
+        {
+            switch (instruction)
+            {
+                case Instruction.FORWARD:
+                    return ("FORWARD " + parameter.ToString());
+                case Instruction.RIGHT:
+                    return ("RIGHT " + parameter.ToString());
+                case Instruction.LEFT:
+                    return ("LEFT " + parameter.ToString());
+                default:
+                    return ("Null Value");
+            }
         }
 
     }

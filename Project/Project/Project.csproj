@@ -42,8 +42,8 @@
   <!-- Everything below here is custom to .NET MF / Gadgeteer template-->
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
-    <Compile Include="ImageRec.cs" />
     <Compile Include="Debug2.cs" />
+    <Compile Include="ImageRec.cs" />
     <Compile Include="MovementController.cs" />
     <Compile Include="SPORK.cs" />
     <Compile Include="SMS.cs" />
@@ -131,5 +131,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\left.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\right.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\up.bmp" />
   </ItemGroup>
 </Project>
