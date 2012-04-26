@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace GadgeteerApp1
 {
-
+    /*
     class SMS
     {
         Program program;
@@ -77,6 +77,6 @@ namespace GadgeteerApp1
             }
         }
     }
-
+*/
 }
 
