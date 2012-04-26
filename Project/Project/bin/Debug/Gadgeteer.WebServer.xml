@@ -155,36 +155,6 @@
             Wraps the content for PUT and POST requests.
             </summary>
         </member>
-        <member name="T:Gadgeteer.Networking.Body">
-            <summary>
-            Specifies the body of the Http request as a byte array.
-            </summary>
-        </member>
-        <member name="P:Gadgeteer.Networking.Body.RawContent">
-            <summary>
-            Gets the posted data as a byte[] array.
-            </summary>
-        </member>
-        <member name="P:Gadgeteer.Networking.Body.ContentType">
-            <summary>
-            Gets the content type of the incoming data. 
-            </summary>
-        </member>
-        <member name="P:Gadgeteer.Networking.Body.Text">
-            <summary>
-            Gets the incoming posted data as text, or returns null.
-            </summary>
-        </member>
-        <member name="P:Gadgeteer.Networking.Body.Picture">
-            <summary>
-            Gets the incoming posted data as a picture, or returns null.
-            </summary>
-        </member>
-        <member name="P:Gadgeteer.Networking.Body.Stream">
-            <summary>
-            Gets the posted data as a stream, or returns null.
-            </summary>
-        </member>
         <member name="T:Gadgeteer.Networking.WebEvent">
             <summary>
              Provides functionality to update a resource for path and to respond to incoming requests. 
@@ -254,37 +224,34 @@
              <param name="method">The incoming http method. </param>
              <param name="path">The path of the requested resource.</param>
         </member>
-        <member name="T:Gadgeteer.Networking.BinaryResponseTemplate">
+        <member name="T:Gadgeteer.Networking.Body">
             <summary>
-            Internal class used as a template for http responses. 
+            Specifies the body of the Http request as a byte array.
             </summary>
         </member>
-        <member name="F:Gadgeteer.Networking.BinaryResponseTemplate.ContentType">
+        <member name="P:Gadgeteer.Networking.Body.RawContent">
             <summary>
-            The content type of the body content. 
+            Gets the posted data as a byte[] array.
             </summary>
         </member>
-        <member name="F:Gadgeteer.Networking.BinaryResponseTemplate.refreshAfter">
+        <member name="P:Gadgeteer.Networking.Body.ContentType">
             <summary>
-            The refresh interval.
+            Gets the content type of the incoming data. 
             </summary>
         </member>
-        <member name="M:Gadgeteer.Networking.BinaryResponseTemplate.#ctor(System.String,System.Byte[],System.UInt32)">
+        <member name="P:Gadgeteer.Networking.Body.Text">
             <summary>
-            Constructor that prepares the response.
-            </summary>
-            <param name="ContentType">The content type to be published.</param>
-            <param name="refreshAfter">Specifies the refresh interval of the web page.</param>
-            <param name="Content">The binary response data.</param>
-        </member>
-        <member name="P:Gadgeteer.Networking.BinaryResponseTemplate.Content">
-            <summary>
-            the body content to be returned. 
+            Gets the incoming posted data as text, or returns null.
             </summary>
         </member>
-        <member name="P:Gadgeteer.Networking.BinaryResponseTemplate.Header">
+        <member name="P:Gadgeteer.Networking.Body.Picture">
             <summary>
-            The header content to be returned. 
+            Gets the incoming posted data as a picture, or returns null.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Networking.Body.Stream">
+            <summary>
+            Gets the posted data as a stream, or returns null.
             </summary>
         </member>
         <member name="T:Gadgeteer.Networking.NamespaceDoc">
@@ -522,6 +489,39 @@
         <member name="M:Gadgeteer.Networking.WebServerManager.Server.Stop">
             <summary>
             Stops the server. 
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Networking.BinaryResponseTemplate">
+            <summary>
+            Internal class used as a template for http responses. 
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Networking.BinaryResponseTemplate.ContentType">
+            <summary>
+            The content type of the body content. 
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Networking.BinaryResponseTemplate.refreshAfter">
+            <summary>
+            The refresh interval.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Networking.BinaryResponseTemplate.#ctor(System.String,System.Byte[],System.UInt32)">
+            <summary>
+            Constructor that prepares the response.
+            </summary>
+            <param name="ContentType">The content type to be published.</param>
+            <param name="refreshAfter">Specifies the refresh interval of the web page.</param>
+            <param name="Content">The binary response data.</param>
+        </member>
+        <member name="P:Gadgeteer.Networking.BinaryResponseTemplate.Content">
+            <summary>
+            the body content to be returned. 
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Networking.BinaryResponseTemplate.Header">
+            <summary>
+            The header content to be returned. 
             </summary>
         </member>
     </members>

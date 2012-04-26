@@ -1,38 +1,42 @@
 using System;
+using System.Threading;
 using GT = Gadgeteer;
 using GTM = Gadgeteer.Modules;
+using Gadgeteer.Modules.GHIElectronics;
 using Microsoft.SPOT;
 
 namespace GadgeteerApp1
 {
     class ImageRec {
         GTM.GHIElectronics.Camera camera;
-        public ImageRec(GTM.GHIElectronics.Camera camera) { 
+        Bitmap stream = new Bitmap(160, 120);
+        GTM.GHIElectronics.MulticolorLed led;
 
-            GT.Timer timer = new GT.Timer(1000);
-            timer.Tick += new GT.Timer.TickEventHandler(timer_Tick);
+        public ImageRec(GTM.GHIElectronics.Camera camera, GTM.GHIElectronics.MulticolorLed led) {
+            this.led = led;
 
+            camera.CurrentPictureResolution = GTM.GHIElectronics.Camera.PictureResolution.Resolution160x120;
+            camera.BitmapStreamed += new Camera.BitmapStreamedEventHandler(camera_BitmapStreamed);
+      
             this.camera = camera;
-            camera.PictureCaptured += new GTM.GHIElectronics.Camera.PictureCapturedEventHandler(camera_PictureCaptured);
+            Thread.Sleep(1000);
+            camera.StartStreamingBitmaps(stream);
+
+            GT.Timer tmr = new GT.Timer(100);
+            tmr.Tick += new GT.Timer.TickEventHandler(tmr_Tick);
+            tmr.Start();
 
         }
 
-        void camera_PictureCaptured(GTM.GHIElectronics.Camera sender, GT.Picture picture)
+        void tmr_Tick(GT.Timer timer) { test(); }
+        
+        void camera_BitmapStreamed(Camera sender, Bitmap bitmap)
         {
-            Bitmap bmp = picture.MakeBitmap();
-            
-            
-            if (method1(bmp)) { Debug2.Instance.Print("method1 says yes"); }
-            if (method2(bmp)) { Debug2.Instance.Print("method2 says yes"); }
-
-
+            Debug2.Instance.displayImage(stream);
         }
 
-        bool method1(Bitmap bmp) {
-            // test one pixel in each top corner only
-            if (isBlack(bmp.GetPixel(1, 1)) && isBlack(bmp.GetPixel(159, 1)))
-            { return true; }
-            else { return false; }
+        void test() {
+            if (method2(stream)) { led.TurnRed(); } else { led.TurnBlue(); } // actually green
         }
 
         bool method2(Bitmap bmp)
@@ -88,9 +92,5 @@ namespace GadgeteerApp1
             else { return false; }
         }
 
-        void timer_Tick(GT.Timer timer)
-        {
-            camera.TakePicture();
-        }
     }
 }

@@ -22,6 +22,7 @@ namespace GadgeteerApp1
         Queue SPORKQueue = new Queue();
         MovementController movementController;
         SMS smsController;
+        ImageRec imageRec;
         bool stationary = true;
         Debug2 Debug;
         // This method is run when the mainboard is powered up or reset.   
@@ -29,15 +30,29 @@ namespace GadgeteerApp1
         void ProgramStarted()
         {
             Debug = Debug2.Instance;
-            Debug.setCellRadio(cellularRadio);
+            //Debug.setCellRadio(cellularRadio);
             Debug.setOled(oledDisplay);
+            //Debug.EnableSignalStrengthIndicator();
+            //Debug.EnableScreenDebug();
+
+            oledDisplay.SimpleGraphics.DisplayTextInRectangle("Testing",0,0,100,50,GT.Color.Black,Resources.GetFont(Resources.FontResources.small));
+
             //Debug.EnableSignalStrengthIndicator(); //Displays the signal strength in the top right hand corner of the screen
             Debug.EnableScreenDebug();
-
             Debug.Print("Program Started");
             //smsController = new SMS(this);
             movementController = new MovementController();
+            imageRec = new ImageRec(camera, led);
 
+            button1.ButtonPressed += new Button.ButtonEventHandler(button1_ButtonPressed);
+            
+            /**
+            cellularRadio.PowerOn();
+            button1.TurnLEDOn();
+                    
+            
+
+            smsController.smsHandler(cellularRadio, new CellularRadio.Sms("07772275081","LEFT 90 FORWARD 20 RIGHT 180", CellularRadio.SmsState.All, new DateTime()));
             camera.CurrentPictureResolution = Camera.PictureResolution.Resolution160x120;
 
             cellularRadio.PowerOn();
@@ -49,16 +64,13 @@ namespace GadgeteerApp1
             //GT.Timer smscheck = new GT.Timer(10000);
             //smscheck.Tick += new GT.Timer.TickEventHandler(smscheck_Tick);
             //cellularRadio.SmsListRetrieved += new CellularRadio.SmsListRetrievedHandler(cellularRadio_SmsListRetrieved);
+            cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
+            smscheck.Start();
+            */
+
+
             //cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
             //smscheck.Start();
-
-
-            camera.BitmapStreamed += new Camera.BitmapStreamedEventHandler(camera_BitmapStreamed);
-        }
-
-        void camera_BitmapStreamed(Camera sender, Bitmap bitmap)
-        {
-            throw new NotImplementedException();
         }
 
         void cellularRadio_SmsReceived(CellularRadio sender, CellularRadio.Sms message)
@@ -68,7 +80,8 @@ namespace GadgeteerApp1
 
         void button1_ButtonPressed(Button sender, Button.ButtonState state)
         {
-            if (button1.IsLedOn)
+
+            /**if (button1.IsLedOn)
             {
                 button1.TurnLEDOff();
                 cellularRadio.PowerOff();
@@ -78,6 +91,7 @@ namespace GadgeteerApp1
                 button1.TurnLEDOn();
                 cellularRadio.PowerOn();
             }
+             */
         }
 
         void cellularRadio_OperatorRetrieved(CellularRadio sender, string operatorName)
