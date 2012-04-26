@@ -20,7 +20,7 @@ namespace GadgeteerApp1
         void camera_PictureCaptured(GTM.GHIElectronics.Camera sender, GT.Picture picture)
         {
             Bitmap bmp = picture.MakeBitmap();
-
+            
             
             if (method1(bmp)) { Debug2.Instance.Print("method1 says yes"); }
             if (method2(bmp)) { Debug2.Instance.Print("method2 says yes"); }

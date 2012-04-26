@@ -52,6 +52,13 @@ namespace GadgeteerApp1
             //cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
             //smscheck.Start();
 
+
+            camera.BitmapStreamed += new Camera.BitmapStreamedEventHandler(camera_BitmapStreamed);
+        }
+
+        void camera_BitmapStreamed(Camera sender, Bitmap bitmap)
+        {
+            throw new NotImplementedException();
         }
 
         void cellularRadio_SmsReceived(CellularRadio sender, CellularRadio.Sms message)
