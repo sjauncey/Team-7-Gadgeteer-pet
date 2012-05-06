@@ -48,18 +48,18 @@ namespace GadgeteerApp1
                 for (int j = 0; j < 2; j++) {
                     // sum reds
                     left[0] = ((GT.Color)(bmp.GetPixel(1 + i, 1 + j))).R;
-                    centre[0] = ((GT.Color)(bmp.GetPixel(79 + i, 1 + j))).R;
-                    right[0] = ((GT.Color)(bmp.GetPixel(159 + i, 1 + j))).R;
+                    centre[0] = ((GT.Color)(bmp.GetPixel(1 + j, 59 + i))).R;
+                    right[0] = ((GT.Color)(bmp.GetPixel(1 + j, 119 + i))).R;
 
                     // sum greens
                     left[1] = ((GT.Color)(bmp.GetPixel(1 + i, 1 + j))).G;
-                    centre[1] = ((GT.Color)(bmp.GetPixel(79 + i, 1 + j))).G;
-                    right[1] = ((GT.Color)(bmp.GetPixel(159 + i, 1 + j))).G;
+                    centre[1] = ((GT.Color)(bmp.GetPixel(1 + j, 59 + i))).G;
+                    right[1] = ((GT.Color)(bmp.GetPixel(1 + j, 119 + i))).G;
 
                     // sum blues
                     left[2] = ((GT.Color)(bmp.GetPixel(1 + i, 1 + j))).B;
-                    centre[2] = ((GT.Color)(bmp.GetPixel(79 + i, 1 + j))).B;
-                    right[2] = ((GT.Color)(bmp.GetPixel(159 + i, 1 + j))).B;
+                    centre[2] = ((GT.Color)(bmp.GetPixel(1 + j, 59 + i))).B;
+                    right[2] = ((GT.Color)(bmp.GetPixel(1 + j, 119 + i))).B;
 
                 }
               }
@@ -77,7 +77,7 @@ namespace GadgeteerApp1
 
 
         bool isBlack(GT.Color col) {
-            if (col.B < 20 && col.G < 20 && col.R < 20) {
+            if (col.B < 30 && col.G < 30 && col.R < 30) {
                 return true;
             }
             else { return false; }
