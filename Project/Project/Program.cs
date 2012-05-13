@@ -16,127 +16,112 @@ using Gadgeteer.Modules.GHIElectronics;
 namespace GadgeteerApp1
 {
 
+    public enum Mode
+    {
+        Solver,
+        Directed
+    }
+
     public partial class Program
     {
 
         Queue SPORKQueue = new Queue();
         MovementController movementController;
-        SMS smsController;
+        //SMS smsController;
         ImageRec imageRec;
         bool stationary = true;
-        Debug2 Debug;
-        // This method is run when the mainboard is powered up or reset.   
+        //Debug2 Debug;
+        public Mode mode { get; set; }
+        MazeSearch ms;
 
         void ProgramStarted()
         {
-            Debug = Debug2.Instance;
-            //Debug.setCellRadio(cellularRadio);
-            Debug.setOled(oledDisplay);
-            //Debug.EnableSignalStrengthIndicator();
-            //Debug.EnableScreenDebug();
-
-            oledDisplay.SimpleGraphics.DisplayTextInRectangle("Testing",0,0,100,50,GT.Color.Black,Resources.GetFont(Resources.FontResources.small));
-
-            //Debug.EnableSignalStrengthIndicator(); //Displays the signal strength in the top right hand corner of the screen
-            Debug.EnableScreenDebug();
+            mode = Mode.Solver;
+            //Debug = Debug2.Instance;
+            Debug2.Instance.setOled(oledDisplay);
+            Debug2.Instance.EnableScreenDebug();
             Debug.Print("Program Started");
-            //smsController = new SMS(this);
-            movementController = new MovementController();
-            imageRec = new ImageRec(camera, led);
+           // smsController = new SMS(this);
+            movementController = new MovementController(relays, compass, this, 1000);
+            imageRec = new ImageRec(camera, this);
+            ms = new MazeSearch(this);
+            //ms.initalStep();
+            addSPORK(new SPORK(Instruction.FORWARD,2));
+            addSPORK(new SPORK(Instruction.LEFT, 0));
+            addSPORK(new SPORK(Instruction.RIGHT, 0));
+            addSPORK(new SPORK(Instruction.FORWARD, 3));
 
-            button1.ButtonPressed += new Button.ButtonEventHandler(button1_ButtonPressed);
-            
-            /**
-            cellularRadio.PowerOn();
-            button1.TurnLEDOn();
-                    
-            
-
-            smsController.smsHandler(cellularRadio, new CellularRadio.Sms("07772275081","LEFT 90 FORWARD 20 RIGHT 180", CellularRadio.SmsState.All, new DateTime()));
-            camera.CurrentPictureResolution = Camera.PictureResolution.Resolution160x120;
-
-            cellularRadio.PowerOn();
-            button1.TurnLEDOn();
-            button1.ButtonPressed += new Button.ButtonEventHandler(button1_ButtonPressed);
-
-            //smsController.smsHandler(cellularRadio, new CellularRadio.Sms("07772275081","LEFT 90 FORWARD 20 RIGHT 180", CellularRadio.SmsState.All, new DateTime()));
-            //cellularRadio.OperatorRetrieved += new CellularRadio.OperatorRetrievedHandler(cellularRadio_OperatorRetrieved);
-            //GT.Timer smscheck = new GT.Timer(10000);
-            //smscheck.Tick += new GT.Timer.TickEventHandler(smscheck_Tick);
-            //cellularRadio.SmsListRetrieved += new CellularRadio.SmsListRetrievedHandler(cellularRadio_SmsListRetrieved);
-            cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
-            smscheck.Start();
-            */
-
-
-            //cellularRadio.SmsReceived += new CellularRadio.SmsReceivedHandler(cellularRadio_SmsReceived);
-            //smscheck.Start();
         }
 
-        void cellularRadio_SmsReceived(CellularRadio sender, CellularRadio.Sms message)
-        {
-            Debug.Print("Message Received");
-        }
-
-        void button1_ButtonPressed(Button sender, Button.ButtonState state)
-        {
-
-            /**if (button1.IsLedOn)
-            {
-                button1.TurnLEDOff();
-                cellularRadio.PowerOff();
-            }
-            else
-            {
-                button1.TurnLEDOn();
-                cellularRadio.PowerOn();
-            }
-             */
-        }
-
-        void cellularRadio_OperatorRetrieved(CellularRadio sender, string operatorName)
-        {
-            Debug.Print(operatorName);
-        }
-
-        void cellularRadio_SmsListRetrieved(CellularRadio sender, ArrayList smsList)
-        {
-            Debug.Print(smsList.Count + " unread SMS");
-           // foreach(Gadgeteer.Modules.Seeed.CellularRadio.Sms s in smsList){
-           //     Debug.Print(s.TextMessage);
-           //  }
-        }
-
-        void smscheck_Tick(GT.Timer timer)
-        {
-            cellularRadio.RetrieveSmsList(CellularRadio.SmsState.ReceivedUnread);
-        }
 
         internal void addSPORKS(Queue sporks)
         {
             foreach (SPORK s in sporks)
             {
-                 Debug.Print("Enqueuing " + s.ToString());
-                 SPORKQueue.Enqueue(s);
+                addSPORK(s);
             }
             if (stationary)
-            { 
-
+            {
+                movementFinished();
+            }
+        }
+        internal void addSPORK(SPORK s)
+        {
+            Debug.Print("Enqueuing " + s.ToString());
+            SPORKQueue.Enqueue(s);
+            if (stationary)
+            {
+                movementFinished();
             }
         }
 
         internal void movementFinished()
         {
+            Debug2.Instance.Print("getting new instruction");
             if (SPORKQueue.Count != 0)
             {
                 stationary = false;
-                //send a new instruction
+                SPORK inst = (SPORK) SPORKQueue.Dequeue();
+                switch (inst.getInstruction())
+                {
+                    case(Instruction.LEFT):
+                        movementController.rotateLeft();
+                        break;
+                    case(Instruction.RIGHT):
+                        movementController.rotateRight();
+                        break;
+                    case(Instruction.FORWARD):
+                        movementController.advance(inst.getParamter());
+                        break;
+                }
 
             }
             else
             {
                 stationary = true;
+                if (mode == Mode.Solver)
+                {
+                    imageRec.testCurrentLocation();
+                }
             }
         }
+
+        internal void aboveSpace()
+        {
+            ms.nextStep(CellType.Unvisited);
+        }
+
+        internal void aboveWall()
+        {
+            ms.nextStep(CellType.Wall);
+        }
+
+        internal void aboveTarget()
+        {
+            ms.nextStep(CellType.Target);
+        }
+
+
+
     }
 }

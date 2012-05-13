@@ -1,3 +1,114 @@
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.resources
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.tinyresources
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyResGen.cache
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.exe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.exe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Project.exe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Project.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebClient.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebServer.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZSpider.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.UsbClientDP.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.IO.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.System.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebClient.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebServer.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZSpider.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.UsbClientDP.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.IO.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.System.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebClient.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebServer.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZSpider.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.UsbClientDP.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.IO.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.System.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebClient.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebServer.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZSpider.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.UsbClientDP.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.IO.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.System.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebClient.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.IO.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.Hardware.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.System.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebClient.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebClient.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.IO.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.Hardware.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.System.xml
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\be\Project.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\be\Project.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\le\Project.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\le\Project.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.exe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Relays.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Relays.pe
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Relays.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Relays.pdbx
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Relays.dll
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Relays.pdb
+C:\Users\Sam\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Relays.xml
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.resources
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.csproj.GenerateResource.Cache
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.tinyresources
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyResGen.cache
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.exe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.pdb
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.exe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.exe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.pdb
@@ -13,86 +124,56 @@ C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\G
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebServer.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZSpider.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Button.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Camera.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.MulticolorLed.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.UsbClientDP.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.CellularRadio.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Compass.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Relays.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.IO.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.System.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.USBHost.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebClient.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebServer.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZSpider.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Button.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Camera.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.MulticolorLed.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.UsbClientDP.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.CellularRadio.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Compass.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Relays.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.IO.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.System.pe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.USBHost.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebClient.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebServer.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZSpider.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Button.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Camera.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.MulticolorLed.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.UsbClientDP.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.CellularRadio.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Compass.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Relays.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.IO.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.System.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.USBHost.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebClient.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebServer.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZSpider.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Button.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Camera.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.MulticolorLed.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.UsbClientDP.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.CellularRadio.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Compass.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Relays.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.IO.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.System.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.USBHost.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebClient.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.dll
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.dll
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.dll
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.MulticolorLed.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.dll
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.dll
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.dll
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.dll
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Relays.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.IO.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.Hardware.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.System.dll
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.USBHost.dll
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.pdb
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.pdb
@@ -103,170 +184,42 @@ C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIE
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.pdb
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.pdb
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.pdb
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.MulticolorLed.pdb
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.MulticolorLed.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.pdb
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.pdb
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.pdb
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.pdb
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.xml
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Relays.pdb
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Relays.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.IO.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.Hardware.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.System.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.USBHost.xml
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyCLR_DebugReferences.cache
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.resources
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.csproj.GenerateResource.Cache
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.tinyresources
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyResGen.cache
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\be\Project.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\be\Project.pdbx
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\le\Project.pe
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\le\Project.pdbx
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.exe
-C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyCLR_DebugReferences.cache
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.resources
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GenerateResource.read.1.tlog
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GenerateResource.write.1.tlog
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\GadgeteerApp1.Resources.tinyresources
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\TinyResGen.cache
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.exe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.exe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.exe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Project.exe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Project.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\le\Project.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\be\Project.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebClient.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebServer.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZSpider.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Button.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Camera.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.MulticolorLed.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.UsbClientDP.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.CellularRadio.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Compass.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.IO.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.System.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.USBHost.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebClient.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebServer.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZSpider.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Button.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Camera.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.MulticolorLed.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.UsbClientDP.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.CellularRadio.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Compass.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.IO.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.System.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.USBHost.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebClient.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\Gadgeteer.WebServer.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.Gadgeteer.FEZSpider.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Button.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Camera.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.MulticolorLed.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.UsbClientDP.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.CellularRadio.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Compass.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.OSH.NETMF.Hardware.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.IO.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.Hardware.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.System.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.USBHost.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebClient.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\Gadgeteer.WebServer.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZHydra.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.Gadgeteer.FEZSpider.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Button.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Camera.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.MulticolorLed.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.UsbClientDP.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.CellularRadio.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Compass.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.OSH.NETMF.Hardware.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.IO.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.Hardware.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.System.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.USBHost.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebClient.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.MulticolorLed.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.IO.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.Hardware.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.System.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.USBHost.dll
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebServer.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebClient.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\Gadgeteer.WebClient.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZHydra.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.Gadgeteer.FEZSpider.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.MulticolorLed.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.MulticolorLed.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.UsbClientDP.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.pdb
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.OSH.NETMF.Hardware.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.IO.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.Hardware.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.System.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.USBHost.xml
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\be\Project.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\be\Project.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\le\Project.pe
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\le\Project.pdbx
-C:\Users\Lewis\Documents\Visual Studio 2010\Projects\Team-7-Gadgeteer-pet\Project\Project\obj\Debug\Project.pdb
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Camera.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Compass.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.USBHost.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Camera.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Compass.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.USBHost.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Camera.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.Compass.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.OledDisplay.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GHIElectronics.NETMF.USBHost.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Camera.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.Compass.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.OledDisplay.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GHIElectronics.NETMF.USBHost.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.dll
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.dll
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.dll
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.USBHost.dll
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.pdb
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Camera.xml
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.pdb
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.Compass.xml
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.pdb
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.xml
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.USBHost.xml

@@ -15,38 +15,36 @@ namespace GadgeteerApp1
 {
     public partial class Program : Gadgeteer.Program
     {
-        // GTM.Module defintions
-		Gadgeteer.Modules.GHIElectronics.Camera camera;
-		Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClient;
-		Gadgeteer.Modules.Seeed.CellularRadio cellularRadio;
-		Gadgeteer.Modules.GHIElectronics.MulticolorLed led;
-		Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
-		Gadgeteer.Modules.Seeed.Compass compass;
-		Gadgeteer.Modules.GHIElectronics.Button button1;
+        // GTM.Module definitions
+        Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClient;
+        Gadgeteer.Modules.Seeed.Relays relays;
+        Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
+        Gadgeteer.Modules.GHIElectronics.Camera camera;
+        Gadgeteer.Modules.Seeed.Compass compass;
 
-		public static void Main()
+        public static void Main()
         {
-			//Important to initialize the Mainboard first
+            //Important to initialize the Mainboard first
             Mainboard = new GHIElectronics.Gadgeteer.FEZSpider();			
 
             Program program = new Program();
-			program.InitializeModules();
+            program.InitializeModules();
             program.ProgramStarted();
             program.Run(); // Starts Dispatcher
         }
 
         private void InitializeModules()
         {   
-			// Initialize GTM.Modules and event handlers here.		
-			usbClient = new GTM.GHIElectronics.UsbClientDP(1);
+            // Initialize GTM.Modules and event handlers here.		
+            usbClient = new GTM.GHIElectronics.UsbClientDP(1);
 		
-			camera = new GTM.GHIElectronics.Camera(3);
+            camera = new GTM.GHIElectronics.Camera(3);
 		
-			led = new GTM.GHIElectronics.MulticolorLed(4);
+            compass = new GTM.Seeed.Compass(4);
 		
-			button1 = new GTM.GHIElectronics.Button(5);
+            relays = new GTM.Seeed.Relays(6);
 		
-			oledDisplay = new GTM.Seeed.OledDisplay(6);
+            oledDisplay = new GTM.Seeed.OledDisplay(9);
 
         }
     }
