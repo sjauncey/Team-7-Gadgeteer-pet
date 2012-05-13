@@ -38,7 +38,7 @@ namespace GadgeteerApp1
         }
 
         public void testCurrentLocation(){
-            if (method2(stream)) { program.aboveWall(); } else { program.aboveSpace(); }
+            if (testForWall(stream)==1) { program.aboveWall(); } else { program.aboveSpace(); }
         }
 
 
@@ -49,32 +49,37 @@ namespace GadgeteerApp1
 
         void test(GT.Timer timer)
         {
-            if (method2(stream)) { program.aboveWall(); } else { program.aboveSpace(); }
+            if (testForWall(stream) == 1) { program.aboveWall(); } else { program.aboveSpace(); }
         }
 
-        bool method2(Bitmap bmp)
+        // tests for walls and the finish cell - returns 0 for clear, 1 for wall, 2 for finish cell
+        int testForWall(Bitmap bmp)
         {
             // test a group of four pixels in each top corner and the top centre (and average each set)
             Single[] left = new Single[3]; Single[] right = new Single[3]; Single[] centre = new Single[3];
+            GT.Color leftPixel, centrePixel, rightPixel;
 
             for (int i = 0; i < 2; i++)
             {
-                for (int j = 0; j < 2; j++)
-                {
+                for (int j = 0; j < 2; j++) {
+                    leftPixel = bmp.GetPixel(10+j,1+i);
+                    centrePixel = bmp.GetPixel(1+j,59+i);
+                    rightPixel = bmp.GetPixel(10+j,119+i);
+                    
                     // sum reds
-                    left[0] = ((GT.Color)(bmp.GetPixel(1 + i, 1 + j))).R;
-                    centre[0] = ((GT.Color)(bmp.GetPixel(1 + j, 59 + i))).R;
-                    right[0] = ((GT.Color)(bmp.GetPixel(1 + j, 119 + i))).R;
+                    left[0] = leftPixel.R;
+                    centre[0] = centrePixel.R;
+                    right[0] = rightPixel.R;
 
                     // sum greens
-                    left[1] = ((GT.Color)(bmp.GetPixel(1 + i, 1 + j))).G;
-                    centre[1] = ((GT.Color)(bmp.GetPixel(1 + j, 59 + i))).G;
-                    right[1] = ((GT.Color)(bmp.GetPixel(1 + j, 119 + i))).G;
+                    left[1] = leftPixel.G;
+                    centre[1] = centrePixel.G;
+                    right[1] = rightPixel.G;
 
                     // sum blues
-                    left[2] = ((GT.Color)(bmp.GetPixel(1 + i, 1 + j))).B;
-                    centre[2] = ((GT.Color)(bmp.GetPixel(1 + j, 59 + i))).B;
-                    right[2] = ((GT.Color)(bmp.GetPixel(1 + j, 119 + i))).B;
+                    left[2] = leftPixel.B;
+                    centre[2] = centrePixel.B;
+                    right[2] = rightPixel.B;
 
                 }
             }
@@ -87,20 +92,20 @@ namespace GadgeteerApp1
                 right[k] = right[k] / 3;
             }
 
-            if (isBlack(left) && isBlack(centre) && isBlack(right)) { return true; } else { return false; }
+            if (isBlack(left) && isBlack(centre) && isBlack(right)) { return 1; }
+            else if (isGreen(left) && isGreen(centre) && isGreen(right)) { return 2; }
+            else { return 0; }
 
         }
 
+        bool isGreen(Single[] cols)
+        {
+            if (cols[0] < 100 && cols[1] < 100 && cols[2] > 200) { return true; }
+            else { return false; }
+        }
 
-<<<<<<< HEAD
         bool isBlack(GT.Color col) {
             if (col.B < 30 && col.G < 30 && col.R < 30) {
-=======
-        bool isBlack(GT.Color col)
-        {
-            if (col.B < 20 && col.G < 20 && col.R < 20)
-            {
->>>>>>> 6764872532ff5765022e9ae1fac4b815c4a098b0
                 return true;
             }
             else { return false; }
