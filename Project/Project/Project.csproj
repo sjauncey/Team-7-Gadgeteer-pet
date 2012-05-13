@@ -45,6 +45,8 @@
     <Compile Include="Debug2.cs" />
     <Compile Include="ImageRec.cs" />
     <Compile Include="MovementController.cs" />
+    <Compile Include="Cell.cs" />
+    <Compile Include="MazeSearch.cs" />
     <Compile Include="SPORK.cs" />
     <Compile Include="SMS.cs" />
     <Compile Include="Program.generated.cs">
@@ -76,25 +78,19 @@
     <Reference Include="GHIElectronics.Gadgeteer.FEZSpider, Version=4.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="GTM.GHIElectronics.Button, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="GTM.GHIElectronics.Camera, Version=4.1.1.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="GTM.GHIElectronics.MulticolorLed, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="GTM.GHIElectronics.UsbClientDP, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="GTM.Seeed.CellularRadio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="GTM.Seeed.Compass, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="GTM.Seeed.OledDisplay, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GTM.Seeed.Relays, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Microsoft.SPOT.Graphics" />
@@ -122,9 +118,6 @@
     <None Include="Program.gadgeteer">
       <Generator>GadgeteerFileCodeGenerator</Generator>
       <LastGenOutput>Program.generated.cs</LastGenOutput>
-    </None>
-    <None Include="Program.gadgeteer.diagram">
-      <DependentUpon>Program.gadgeteer</DependentUpon>
     </None>
     <None Include="Resources\NinaB.tinyfnt" />
     <None Include="Resources\small.tinyfnt" />

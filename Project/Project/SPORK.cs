@@ -17,41 +17,8 @@ namespace GadgeteerApp1
 
         public SPORK(Instruction inst, int param)
         {
-            switch (inst)
-            {
-                case Instruction.FORWARD:
-                    instruction = inst;
-                    parameter = param;
-                    break;
-                case Instruction.RIGHT:
-                    param = param % 360;
-                    if (param < 180)
-                    {
-                        instruction = Instruction.RIGHT;
-                        parameter = param;
-                    }
-                    else
-                    {
-                        instruction = Instruction.LEFT;
-                        parameter = 360 - param;
-                    }
-                    break;
-                case Instruction.LEFT:
-                    param = param % 360;
-                    if (param < 180)
-                    {
-                        instruction = Instruction.LEFT;
-                        parameter = param;
-                    }
-                    else
-                    {
-                        instruction = Instruction.RIGHT;
-                        parameter = 360 - param;
-                    }
-                    break;
-                default:
-                    throw new NotSupportedException();
-            }
+            this.instruction = inst;
+            parameter = param;
         }
 
         public Instruction getInstruction()
@@ -71,9 +38,9 @@ namespace GadgeteerApp1
                 case Instruction.FORWARD:
                     return ("FORWARD " + parameter.ToString());
                 case Instruction.RIGHT:
-                    return ("RIGHT " + parameter.ToString());
+                    return ("RIGHT");
                 case Instruction.LEFT:
-                    return ("LEFT " + parameter.ToString());
+                    return ("LEFT");
                 default:
                     return ("Null Value");
             }

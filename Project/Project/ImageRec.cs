@@ -7,36 +7,49 @@ using Microsoft.SPOT;
 
 namespace GadgeteerApp1
 {
-    class ImageRec {
+    class ImageRec
+    {
         GTM.GHIElectronics.Camera camera;
         Bitmap stream = new Bitmap(160, 120);
-        GTM.GHIElectronics.MulticolorLed led;
+        GT.Timer tmr;
+        Program program;
 
-        public ImageRec(GTM.GHIElectronics.Camera camera, GTM.GHIElectronics.MulticolorLed led) {
-            this.led = led;
-
+        public ImageRec(GTM.GHIElectronics.Camera camera, Program program)
+        {
+            this.program = program;
             camera.CurrentPictureResolution = GTM.GHIElectronics.Camera.PictureResolution.Resolution160x120;
             camera.BitmapStreamed += new Camera.BitmapStreamedEventHandler(camera_BitmapStreamed);
-      
+
             this.camera = camera;
             Thread.Sleep(1000);
             camera.StartStreamingBitmaps(stream);
 
-            GT.Timer tmr = new GT.Timer(100);
-            tmr.Tick += new GT.Timer.TickEventHandler(tmr_Tick);
-            tmr.Start();
-
+            tmr = new GT.Timer(100);
+            tmr.Tick += new GT.Timer.TickEventHandler(test);
         }
 
-        void tmr_Tick(GT.Timer timer) { test(); }
-        
+        public void startContinuousChecking()
+        {
+            tmr.Start();
+        }
+        public void stopContinuousChecking()
+        {
+            tmr.Stop();
+        }
+
+        public void testCurrentLocation(){
+            if (method2(stream)) { program.aboveWall(); } else { program.aboveSpace(); }
+        }
+
+
         void camera_BitmapStreamed(Camera sender, Bitmap bitmap)
         {
-            Debug2.Instance.displayImage(stream);
+            //Debug2.Instance.displayImage(stream);
         }
 
-        void test() {
-            if (method2(stream)) { led.TurnRed(); } else { led.TurnBlue(); } // actually green
+        void test(GT.Timer timer)
+        {
+            if (method2(stream)) { program.aboveWall(); } else { program.aboveSpace(); }
         }
 
         bool method2(Bitmap bmp)
@@ -44,8 +57,10 @@ namespace GadgeteerApp1
             // test a group of four pixels in each top corner and the top centre (and average each set)
             Single[] left = new Single[3]; Single[] right = new Single[3]; Single[] centre = new Single[3];
 
-            for (int i = 0; i < 2; i++) {
-                for (int j = 0; j < 2; j++) {
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
                     // sum reds
                     left[0] = ((GT.Color)(bmp.GetPixel(1 + i, 1 + j))).R;
                     centre[0] = ((GT.Color)(bmp.GetPixel(79 + i, 1 + j))).R;
@@ -62,22 +77,25 @@ namespace GadgeteerApp1
                     right[2] = ((GT.Color)(bmp.GetPixel(159 + i, 1 + j))).B;
 
                 }
-              }
+            }
 
             // average
-            for (int k = 0; k < 3; k++) {
+            for (int k = 0; k < 3; k++)
+            {
                 left[k] = left[k] / 3;
                 centre[k] = centre[k] / 3;
                 right[k] = right[k] / 3;
             }
 
             if (isBlack(left) && isBlack(centre) && isBlack(right)) { return true; } else { return false; }
-                                  
+
         }
 
 
-        bool isBlack(GT.Color col) {
-            if (col.B < 20 && col.G < 20 && col.R < 20) {
+        bool isBlack(GT.Color col)
+        {
+            if (col.B < 20 && col.G < 20 && col.R < 20)
+            {
                 return true;
             }
             else { return false; }
