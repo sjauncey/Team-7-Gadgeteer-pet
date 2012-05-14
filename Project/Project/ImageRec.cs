@@ -64,7 +64,7 @@ namespace GadgeteerApp1
         }
 
         // tests for walls and the finish cell - returns 0 for clear, 1 for wall, 2 for finish cell
-        int testForWall(Bitmap bmp)
+        int ttestForWall(Bitmap bmp)
         {
             // test a group of four pixels in each top corner and the top centre (and average each set)
             Single[] left = new Single[3]; Single[] right = new Single[3]; Single[] centre = new Single[3];
@@ -102,9 +102,49 @@ namespace GadgeteerApp1
                 left[k] = left[k] / 4;
                 centre[k] = centre[k] / 4;
                 right[k] = right[k] / 4;
+
             }
-            if (isBlack(left) && isBlack(centre) && isBlack(right)) { return 1; }
-            else if (isRed(left) && isRed(centre) && isRed(right)) { return 2; }
+           // Debug2.Instance.Print(left[0].ToString() + " " + left[1].ToString() + " " + left[2].ToString());
+            Debug2.Instance.Print(centre[0].ToString() + " " + centre[1].ToString() + " " + centre[2].ToString());
+           // Debug2.Instance.Print(right[0].ToString() + " " + right[1].ToString() + " " + right[2].ToString());
+            if (/*isBlue(left) && isBlue(right)*/ isBlue(centre)) { return 1; }
+            else if (/*isRed(left) && isRed(right) &&*/ isRed(centre)) { return 2; }
+            else { return 0; }
+
+        }
+
+        // tests for walls and the finish cell - returns 0 for clear, 1 for wall, 2 for finish cell
+        int testForWall(Bitmap bmp)
+        {
+            Single[] centre = new Single[3];
+            GT.Color centrePixel;
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+
+                    centrePixel = bmp.GetPixel(58 + j, 58 + i);
+
+                    centre[0] += centrePixel.R;
+
+                    centre[1] += centrePixel.G;
+
+                    centre[2] += centrePixel.B;
+
+
+                }
+            }
+
+            // average
+            for (int k = 0; k < 3; k++)
+            {
+                centre[k] = centre[k] / 25;
+
+            }
+            //Debug2.Instance.Print(centre[0].ToString() + " " + centre[1].ToString() + " " + centre[2].ToString());
+            if (isBlack(centre)) { return 1; }
+            if (isRed(centre)) { return 2; }
             else { return 0; }
 
         }
@@ -115,9 +155,15 @@ namespace GadgeteerApp1
             else { return false; }
         }
 
+        bool isBlue(Single[] cols)
+        {
+            if (cols[2] > 160 && cols[2] - cols[1] > 30 && cols[2] - cols[0] > 30) { return true; }
+            else { return false; }
+        }
+
         bool isRed(Single[] cols)
         {
-            Debug2.Instance.Print(cols[0].ToString() + " " + cols[1].ToString() + " " + cols[2].ToString());
+
             //if (cols[0] > 215 && cols[1] < 180 && cols[2] < 180) { return true; }
             //30+ difference between red each of the other colors should give a strong indication of a red hint
             if (cols[0] > 160 && cols[0] - cols[1] > 30 && cols[0] - cols[2] > 30) { return true; }
@@ -126,7 +172,8 @@ namespace GadgeteerApp1
 
         bool isBlack(Single[] cols)
         {
-            if (cols[0] < 40 && cols[1] < 40 && cols[2] < 40)
+            //Debug2.Instance.Print(cols[0].ToString() + " " + cols[1].ToString() + " " + cols[2].ToString());
+            if (cols[0] < 120 && cols[1] < 120 && cols[2] < 120)
             {
                 return true;
             }

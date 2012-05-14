@@ -45,7 +45,6 @@ namespace GadgeteerApp1
             ms = new MazeSearch(this);
             //ms.initalStep();
             imageRec.startContinuousChecking();
-
         }
 
 
