@@ -38,7 +38,7 @@ namespace GadgeteerApp1
         }
 
         public void testCurrentLocation(){
-            if (testForWall(stream)==1) { program.aboveWall(); } else { program.aboveSpace(); }
+            test(null);
         }
 
 
@@ -49,7 +49,18 @@ namespace GadgeteerApp1
 
         void test(GT.Timer timer)
         {
-            if (testForWall(stream) == 1) { program.aboveWall(); } else { program.aboveSpace(); }
+            switch (testForWall(stream))
+            {
+                case 1:
+                    program.aboveWall();
+                    break;
+                case 0:
+                    program.aboveSpace();
+                    break;
+                case 2:
+                    program.aboveTarget();
+                    break;
+            }
         }
 
         // tests for walls and the finish cell - returns 0 for clear, 1 for wall, 2 for finish cell
@@ -62,24 +73,25 @@ namespace GadgeteerApp1
             for (int i = 0; i < 2; i++)
             {
                 for (int j = 0; j < 2; j++) {
-                    leftPixel = bmp.GetPixel(10+j,1+i);
+                    //pixel indexing starts at 0, up to 119
+                    leftPixel = bmp.GetPixel(10+j,0+i);
                     centrePixel = bmp.GetPixel(1+j,59+i);
-                    rightPixel = bmp.GetPixel(10+j,119+i);
+                    rightPixel = bmp.GetPixel(10+j,118+i);
                     
                     // sum reds
-                    left[0] = leftPixel.R;
-                    centre[0] = centrePixel.R;
-                    right[0] = rightPixel.R;
+                    left[0] += leftPixel.R;
+                    centre[0] += centrePixel.R;
+                    right[0] += rightPixel.R;
 
                     // sum greens
-                    left[1] = leftPixel.G;
-                    centre[1] = centrePixel.G;
-                    right[1] = rightPixel.G;
-
+                    left[1] += leftPixel.G;
+                    centre[1] += centrePixel.G;
+                    right[1] += rightPixel.G;
+                    
                     // sum blues
-                    left[2] = leftPixel.B;
-                    centre[2] = centrePixel.B;
-                    right[2] = rightPixel.B;
+                    left[2] += leftPixel.B;
+                    centre[2] += centrePixel.B;
+                    right[2] += rightPixel.B;
 
                 }
             }
@@ -87,13 +99,12 @@ namespace GadgeteerApp1
             // average
             for (int k = 0; k < 3; k++)
             {
-                left[k] = left[k] / 3;
-                centre[k] = centre[k] / 3;
-                right[k] = right[k] / 3;
+                left[k] = left[k] / 4;
+                centre[k] = centre[k] / 4;
+                right[k] = right[k] / 4;
             }
-
             if (isBlack(left) && isBlack(centre) && isBlack(right)) { return 1; }
-            else if (isGreen(left) && isGreen(centre) && isGreen(right)) { return 2; }
+            else if (isRed(left) && isRed(centre) && isRed(right)) { return 2; }
             else { return 0; }
 
         }
@@ -104,16 +115,18 @@ namespace GadgeteerApp1
             else { return false; }
         }
 
-        bool isBlack(GT.Color col) {
-            if (col.B < 30 && col.G < 30 && col.R < 30) {
-                return true;
-            }
+        bool isRed(Single[] cols)
+        {
+            Debug2.Instance.Print(cols[0].ToString() + " " + cols[1].ToString() + " " + cols[2].ToString());
+            //if (cols[0] > 215 && cols[1] < 180 && cols[2] < 180) { return true; }
+            //30+ difference between red each of the other colors should give a strong indication of a red hint
+            if (cols[0] > 160 && cols[0] - cols[1] > 30 && cols[0] - cols[2] > 30) { return true; }
             else { return false; }
         }
 
         bool isBlack(Single[] cols)
         {
-            if (cols[0] < 20 && cols[1] < 20 && cols[2] < 20)
+            if (cols[0] < 40 && cols[1] < 40 && cols[2] < 40)
             {
                 return true;
             }

@@ -223,3 +223,17 @@ C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.pdb
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.OledDisplay.xml
 C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GHIElectronics.NETMF.USBHost.xml
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Button.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.CellularRadio.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Button.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.CellularRadio.pe
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.GHIElectronics.Button.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\LE\GTM.Seeed.CellularRadio.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.GHIElectronics.Button.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\BE\GTM.Seeed.CellularRadio.pdbx
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.dll
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.dll
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.pdb
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.GHIElectronics.Button.xml
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.pdb
+C:\Users\Tim\Dropbox\Code\C#\Team-7-Gadgeteer-pet\Project\Project\bin\Debug\GTM.Seeed.CellularRadio.xml

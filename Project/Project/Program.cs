@@ -27,29 +27,24 @@ namespace GadgeteerApp1
 
         Queue SPORKQueue = new Queue();
         MovementController movementController;
-        //SMS smsController;
+        SMS smsController;
         ImageRec imageRec;
         bool stationary = true;
-        //Debug2 Debug;
         public Mode mode { get; set; }
         MazeSearch ms;
 
         void ProgramStarted()
         {
-            mode = Mode.Solver;
-            //Debug = Debug2.Instance;
+            mode = Mode.Directed;
             Debug2.Instance.setOled(oledDisplay);
             Debug2.Instance.EnableScreenDebug();
-            Debug.Print("Program Started");
-           // smsController = new SMS(this);
+            Debug2.Instance.Print("Program Started");
+            smsController = new SMS(this);
             movementController = new MovementController(relays, compass, this, 1000);
             imageRec = new ImageRec(camera, this);
             ms = new MazeSearch(this);
             //ms.initalStep();
-            addSPORK(new SPORK(Instruction.FORWARD,2));
-            addSPORK(new SPORK(Instruction.LEFT, 0));
-            addSPORK(new SPORK(Instruction.RIGHT, 0));
-            addSPORK(new SPORK(Instruction.FORWARD, 3));
+            imageRec.startContinuousChecking();
 
         }
 
@@ -108,20 +103,50 @@ namespace GadgeteerApp1
 
         internal void aboveSpace()
         {
-            ms.nextStep(CellType.Unvisited);
+            Debug2.Instance.Print("Over white");
+            if (mode == Mode.Solver)
+            {
+                ms.nextStep(CellType.Unvisited);
+            }
+            else
+            {
+                //do nothing
+            }
         }
 
         internal void aboveWall()
         {
-            ms.nextStep(CellType.Wall);
+            Debug2.Instance.Print("Over black");
+            if (mode == Mode.Solver)
+            {
+                ms.nextStep(CellType.Wall);
+            }
+            else
+            {
+                //
+            }
         }
 
         internal void aboveTarget()
         {
-            ms.nextStep(CellType.Target);
+            Debug2.Instance.Print("Over red");
+            if (mode == Mode.Solver)
+            {
+
+                ms.nextStep(CellType.Target);
+            }
+            else
+            {
+
+            }
         }
 
 
 
+
+        internal void mazeSolved()
+        {
+            Debug2.Instance.Print("Solved the maze!");
+        }
     }
 }

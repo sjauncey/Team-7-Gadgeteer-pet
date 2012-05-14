@@ -115,7 +115,6 @@ namespace GadgeteerApp1
                     currentMove = current.West;
                 } else if(current.Parent == null){
                     //All children have been visited, and our parent is null, so we must have finished!
-                    //TODO: Finished actions
                     if (target == null)
                     {
                         //no solution found
@@ -126,7 +125,7 @@ namespace GadgeteerApp1
                         target.distance = 0;
                         target.distanceSet = true;
                         calculateDistances(target);
-                        //we are at the start, so we can now just repeatedly go down the smallest number to find fastest solution to the maze.
+                        shortestDistanceWalk();
                     }
                 }
                 else if (current.Parent == current.North)
@@ -211,7 +210,7 @@ namespace GadgeteerApp1
                     //We are soo stuck right now
                 }
             }
-            //we should now have issued the correct instructions to get to the end of the maze
+            program.mazeSolved();
         }
 
         //Recursivley calculates the distances to all surrounding cells.
