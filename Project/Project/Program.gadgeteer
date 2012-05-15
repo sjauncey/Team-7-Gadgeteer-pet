@@ -109,21 +109,6 @@
         </socketUses>
       </module>
     </gadgeteerModelHasGadgeteerHardware>
-    <gadgeteerModelHasGadgeteerHardware Id="4823b995-e96b-4b86-ba8a-1abb0e457de9">
-      <module Id="f74c5d22-3e87-443e-8f78-f5fd79f2b285" cachedDefinition="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ModuleDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; Name=&quot;Compass&quot; Type=&quot;Gadgeteer.Modules.Seeed.Compass&quot; HardwareVersion=&quot;1.0&quot; Image=&quot;C:\Program Files (x86)\Seeed\Microsoft .NET Gadgeteer\Modules\Compass\Resources\Image.jpg&quot; BoardWidth=&quot;17.2&quot; BoardHeight=&quot;32.2&quot; MinimumGadgeteerCoreVersion=&quot;2.41.100&quot; HelpUrl=&quot;&quot; UniqueId=&quot;dd0d1515-d4b2-4d90-9857-6cdfe62df3c0&quot; Manufacturer=&quot;Seeed&quot; Description=&quot;A Compass module&quot; InstanceName=&quot;compass&quot; ModuleSuppliesPower=&quot;false&quot;&gt;&#xD;&#xA;  &lt;ProvidedSockets /&gt;&#xD;&#xA;  &lt;Assemblies&gt;&#xD;&#xA;    &lt;Assembly MFVersion=&quot;4.1&quot; Name=&quot;GTM.Seeed.Compass&quot; /&gt;&#xD;&#xA;  &lt;/Assemblies&gt;&#xD;&#xA;  &lt;LibrariesProvided /&gt;&#xD;&#xA;  &lt;Sockets&gt;&#xD;&#xA;    &lt;Socket Orientation=&quot;90&quot; Left=&quot;8.6&quot; Top=&quot;27.7&quot; TypesLabel=&quot;I&quot; ConstructorOrder=&quot;1&quot; Optional=&quot;false&quot;&gt;&#xD;&#xA;      &lt;Types&gt;&#xD;&#xA;        &lt;Type&gt;I&lt;/Type&gt;&#xD;&#xA;      &lt;/Types&gt;&#xD;&#xA;      &lt;Pins&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;3&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;true&quot;&gt;8&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;true&quot;&gt;9&lt;/Pin&gt;&#xD;&#xA;      &lt;/Pins&gt;&#xD;&#xA;    &lt;/Socket&gt;&#xD;&#xA;  &lt;/Sockets&gt;&#xD;&#xA;  &lt;ExtraLibrariesRequired /&gt;&#xD;&#xA;&lt;/ModuleDefinition&gt;" name="compass" moduleType="Gadgeteer.Modules.Seeed.Compass" moduleDefinitionId="dd0d1515-d4b2-4d90-9857-6cdfe62df3c0">
-        <socketUses>
-          <moduleHasSocketUses Id="ffae98bb-1278-4c33-859d-f09322e523ac">
-            <socketUse Id="2663c8ba-3026-48a8-8609-e4cf85de6b28" label="I">
-              <socket>
-                <socketUseReferencesSocket Id="c2d379c0-66bd-4265-a470-6521fc4bb6c7">
-                  <socketMoniker Id="82b1048d-6e96-444a-b9e9-8a98f7c536f7" />
-                </socketUseReferencesSocket>
-              </socket>
-            </socketUse>
-          </moduleHasSocketUses>
-        </socketUses>
-      </module>
-    </gadgeteerModelHasGadgeteerHardware>
     <gadgeteerModelHasGadgeteerHardware Id="e53a4f77-1eed-4021-969b-d4f0d4e65210">
       <module Id="98640a03-0617-420b-b8a9-334396aa8f36" cachedDefinition="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ModuleDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; Name=&quot;CellularRadio&quot; Type=&quot;Gadgeteer.Modules.Seeed.CellularRadio&quot; HardwareVersion=&quot;1.0&quot; Image=&quot;C:\Program Files (x86)\Seeed\Microsoft .NET Gadgeteer\Modules\CellularRadio\Resources\Image.jpg&quot; BoardWidth=&quot;64&quot; BoardHeight=&quot;47&quot; MinimumGadgeteerCoreVersion=&quot;2.41.100&quot; HelpUrl=&quot;&quot; UniqueId=&quot;19ff21d4-5fe6-4abd-b836-0fa8d49211e9&quot; Manufacturer=&quot;Seeed&quot; Description=&quot;A CellularRadio module&quot; InstanceName=&quot;cellularRadio&quot; ModuleSuppliesPower=&quot;false&quot;&gt;&#xD;&#xA;  &lt;ProvidedSockets /&gt;&#xD;&#xA;  &lt;Assemblies&gt;&#xD;&#xA;    &lt;Assembly MFVersion=&quot;4.1&quot; Name=&quot;GTM.Seeed.CellularRadio&quot; /&gt;&#xD;&#xA;  &lt;/Assemblies&gt;&#xD;&#xA;  &lt;LibrariesProvided /&gt;&#xD;&#xA;  &lt;Sockets&gt;&#xD;&#xA;    &lt;Socket Orientation=&quot;90&quot; Left=&quot;47&quot; Top=&quot;42&quot; TypesLabel=&quot;K&quot; ConstructorOrder=&quot;1&quot; Optional=&quot;false&quot;&gt;&#xD;&#xA;      &lt;Types&gt;&#xD;&#xA;        &lt;Type&gt;K&lt;/Type&gt;&#xD;&#xA;      &lt;/Types&gt;&#xD;&#xA;      &lt;Pins&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;3&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;4&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;5&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;6&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;7&lt;/Pin&gt;&#xD;&#xA;      &lt;/Pins&gt;&#xD;&#xA;    &lt;/Socket&gt;&#xD;&#xA;  &lt;/Sockets&gt;&#xD;&#xA;  &lt;ExtraLibrariesRequired /&gt;&#xD;&#xA;&lt;/ModuleDefinition&gt;" name="cellularRadio" moduleType="Gadgeteer.Modules.Seeed.CellularRadio" moduleDefinitionId="19ff21d4-5fe6-4abd-b836-0fa8d49211e9">
         <socketUses>
@@ -141,6 +126,21 @@
               <socket>
                 <socketUseReferencesSocket Id="77bc78a5-611a-4d82-9a0e-ab95a6fe2d31">
                   <socketMoniker Id="6162b038-9960-4610-8a74-654c46dd7c91" />
+                </socketUseReferencesSocket>
+              </socket>
+            </socketUse>
+          </moduleHasSocketUses>
+        </socketUses>
+      </module>
+    </gadgeteerModelHasGadgeteerHardware>
+    <gadgeteerModelHasGadgeteerHardware Id="eb998e9e-e351-4b63-9104-fff921e34180">
+      <module Id="0b5df699-e5b6-4446-b84d-4cc67439890d" cachedDefinition="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&#xD;&#xA;&lt;ModuleDefinition xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; Name=&quot;Gyro&quot; Type=&quot;Gadgeteer.Modules.Seeed.Gyro&quot; HardwareVersion=&quot;1.0&quot; Image=&quot;C:\Program Files (x86)\Seeed\Microsoft .NET Gadgeteer\Modules\Gyro\Resources\Image.jpg&quot; BoardWidth=&quot;17.2&quot; BoardHeight=&quot;32.2&quot; MinimumGadgeteerCoreVersion=&quot;2.41.100&quot; HelpUrl=&quot;&quot; UniqueId=&quot;18edeb8a-2d56-419f-94c9-335dffd034c3&quot; Manufacturer=&quot;Seeed&quot; Description=&quot;A Gyro module&quot; InstanceName=&quot;gyro&quot; ModuleSuppliesPower=&quot;false&quot;&gt;&#xD;&#xA;  &lt;ProvidedSockets /&gt;&#xD;&#xA;  &lt;Assemblies&gt;&#xD;&#xA;    &lt;Assembly MFVersion=&quot;4.1&quot; Name=&quot;GTM.Seeed.Gyro&quot; /&gt;&#xD;&#xA;  &lt;/Assemblies&gt;&#xD;&#xA;  &lt;LibrariesProvided /&gt;&#xD;&#xA;  &lt;Sockets&gt;&#xD;&#xA;    &lt;Socket Orientation=&quot;90&quot; Left=&quot;8.6&quot; Top=&quot;27.7&quot; TypesLabel=&quot;I&quot; ConstructorOrder=&quot;1&quot; Optional=&quot;false&quot;&gt;&#xD;&#xA;      &lt;Types&gt;&#xD;&#xA;        &lt;Type&gt;I&lt;/Type&gt;&#xD;&#xA;      &lt;/Types&gt;&#xD;&#xA;      &lt;Pins&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;false&quot;&gt;3&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;true&quot;&gt;8&lt;/Pin&gt;&#xD;&#xA;        &lt;Pin Shared=&quot;true&quot;&gt;9&lt;/Pin&gt;&#xD;&#xA;      &lt;/Pins&gt;&#xD;&#xA;    &lt;/Socket&gt;&#xD;&#xA;  &lt;/Sockets&gt;&#xD;&#xA;  &lt;ExtraLibrariesRequired /&gt;&#xD;&#xA;&lt;/ModuleDefinition&gt;" name="gyro" moduleType="Gadgeteer.Modules.Seeed.Gyro" moduleDefinitionId="18edeb8a-2d56-419f-94c9-335dffd034c3">
+        <socketUses>
+          <moduleHasSocketUses Id="94949a98-8e21-40ef-990d-b37bb22de868">
+            <socketUse Id="e54f3132-7cfe-4489-8212-f8d977f12bc9" label="I">
+              <socket>
+                <socketUseReferencesSocket Id="300287fe-d7f4-4e44-96d6-43d8c7f0390c">
+                  <socketMoniker Id="82b1048d-6e96-444a-b9e9-8a98f7c536f7" />
                 </socketUseReferencesSocket>
               </socket>
             </socketUse>

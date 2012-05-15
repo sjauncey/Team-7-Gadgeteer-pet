@@ -40,11 +40,14 @@ namespace GadgeteerApp1
             Debug2.Instance.EnableScreenDebug();
             Debug2.Instance.Print("Program Started");
             smsController = new SMS(this);
-            movementController = new MovementController(relays, compass, this, 1000);
+            movementController = new MovementController(relays, gyro, this, 1000);
             imageRec = new ImageRec(camera, this);
             ms = new MazeSearch(this);
             //ms.initalStep();
-            imageRec.startContinuousChecking();
+            //imageRec.startContinuousChecking();
+            addSPORK(new SPORK(Instruction.LEFT, 0));
+            addSPORK(new SPORK(Instruction.FORWARD, 1));
+            addSPORK(new SPORK(Instruction.RIGHT, 0));
         }
 
 
@@ -74,6 +77,7 @@ namespace GadgeteerApp1
             Debug2.Instance.Print("getting new instruction");
             if (SPORKQueue.Count != 0)
             {
+                imageRec.testCurrentLocation();
                 stationary = false;
                 SPORK inst = (SPORK) SPORKQueue.Dequeue();
                 switch (inst.getInstruction())

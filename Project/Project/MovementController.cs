@@ -17,26 +17,30 @@ namespace GadgeteerApp1
     class MovementController
     {
         private Relays relays;
-        private Compass compass;
+        private Gyro gyro;
         private GT.Timer runTimer;
         private double offset;
         private double objective;
+        private double turned;
         private Program model;
         private int timeUnit;
-        private double quarter = Math.PI / 2;
-        private double whole = Math.PI * 2;
 
-        public MovementController(Relays relayBoard, Compass compassBoard, Program passedModel, int timeUnit){
+        public MovementController(Relays relayBoard, Gyro gyroBoard, Program passedModel, int timeUnit)
+        {
             model = passedModel;
             relays = relayBoard;
-            compass = compassBoard;
+            gyro = gyroBoard;
             this.timeUnit = timeUnit;
             runTimer = new GT.Timer(timeUnit, GT.Timer.BehaviorType.RunOnce);
             runTimer.Tick += new GT.Timer.TickEventHandler(runTimer_Tick);
-            setOffset();
+            gyro.ContinuousMeasurementInterval = new System.TimeSpan(0, 0, 0, 0, 100);
+            gyro.Calibrate();
+            gyro.MeasurementComplete += new Gyro.MeasurementCompleteEventHandler(gyro_MeasurementComplete);
         }
 
-        public void advance(int distance){
+
+        public void advance(int distance)
+        {
             Debug2.Instance.Print("advancing " + distance.ToString());
             if (runTimer.IsRunning)
             {
@@ -45,7 +49,7 @@ namespace GadgeteerApp1
             else
             {
                 stop();
-                runTimer.Interval = new System.TimeSpan(0,0,0,0,distance * timeUnit);
+                runTimer.Interval = new System.TimeSpan(0, 0, 0, 0, distance * timeUnit);
                 runTimer.Restart();
                 relays.Relay1 = true;
                 relays.Relay3 = true;
@@ -56,66 +60,66 @@ namespace GadgeteerApp1
         {
             stop();
             Debug2.Instance.Print("rotate right");
-            objective = (objective + quarter) % whole;
-
+            objective = (90 + offset);
+            turned = 0;
+            gyro.StartContinuousMeasurements();
             relays.Relay1 = true;
             relays.Relay4 = true;
-
-            compass.StartContinuousMeasurements();
         }
 
         public void rotateLeft()
         {
             stop();
             Debug2.Instance.Print("rotate left");
-            objective = (objective + 3*quarter) % whole; //Can't just minus 90 as % will give -ve answer on -ve input
-
+            objective = (-90 + offset);
+            turned = 0;
+            gyro.StartContinuousMeasurements();
             relays.Relay2 = true;
             relays.Relay3 = true;
-
-            compass.StartContinuousMeasurements();
         }
 
-        public void setOffset(){
-            compass.MeasurementComplete += new Compass.MeasurementCompleteEventHandler(compassDiscreteComplete);
-            compass.RequestMeasurement();
-        }
 
-        void compassDiscreteComplete(Compass sender, Compass.SensorData sensorData){
-            compass.MeasurementComplete -= compassDiscreteComplete;
-            offset = ((quarter/2) - sensorData.Angle) % whole;
-            compass.MeasurementComplete += new Compass.MeasurementCompleteEventHandler(compassContinuousComplete);
-        }
-
-        void compassContinuousComplete(Compass sender, Compass.SensorData sensorData){
-            
-            double value = localise(sensorData.Angle);
-            Debug2.Instance.Print("value:" + value.ToString() + " objective:"+objective.ToString());
-            if ((value - objective) < 0.05 && (objective - value) < 0.05)
+        void gyro_MeasurementComplete(Gyro sender, Gyro.SensorData sensorData)
+        {
+            turned += (sensorData.Z / 10);
+            if (((objective < 0) && (turned < objective)) || ((objective > 0) && (turned > objective)))
             {
                 stop();
-                compass.StopContinuousMeasurements();
-                model.movementFinished();
-                Debug2.Instance.Print("turn complete value: " + value.ToString() + " objective:" + objective.ToString());
-            }            
+                offset = objective - turned;
+                gyro.StopContinuousMeasurements();
+                if (offset < -5)
+                {
+                    offset += 90;
+                    rotateLeft();
+                }
+                else if (offset > 5)
+                {
+                    offset -= 90;
+                    rotateRight();
+                }
+                else
+                {
+                    model.movementFinished();
+                }
+
+            }
         }
 
-        public void allStop(){
+        public void allStop()
+        {
             stop();
             runTimer.Stop();
         }
 
-        private void runTimer_Tick(GT.Timer timer){
+        private void runTimer_Tick(GT.Timer timer)
+        {
             Debug2.Instance.Print("advance finished");
             stop();
             model.movementFinished();
         }
 
-        private double localise(double measure){
-            return (measure + offset) % whole;
-        }
-
-        private void stop(){
+        private void stop()
+        {
             relays.Relay1 = false;
             relays.Relay2 = false;
             relays.Relay3 = false;

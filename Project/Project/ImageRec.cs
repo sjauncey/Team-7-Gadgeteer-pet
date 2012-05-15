@@ -142,7 +142,7 @@ namespace GadgeteerApp1
                 centre[k] = centre[k] / 25;
 
             }
-            //Debug2.Instance.Print(centre[0].ToString() + " " + centre[1].ToString() + " " + centre[2].ToString());
+            Debug2.Instance.Print(centre[0].ToString() + " " + centre[1].ToString() + " " + centre[2].ToString());
             if (isBlack(centre)) { return 1; }
             if (isRed(centre)) { return 2; }
             else { return 0; }

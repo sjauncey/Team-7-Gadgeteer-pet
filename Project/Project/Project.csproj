@@ -90,7 +90,7 @@
     <Reference Include="GTM.Seeed.CellularRadio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="GTM.Seeed.Compass, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="GTM.Seeed.Gyro, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="GTM.Seeed.OledDisplay, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
