@@ -26,6 +26,7 @@ namespace GadgeteerApp1
             root = new Cell(CellType.Unfinished, 0, 0);
             cells = new System.Collections.Hashtable();
             target = null;
+            currentMove = new Cell(CellType.Unfinished, 0, 0);
         }
         private void insertCell(Cell cell)
         {
@@ -45,40 +46,29 @@ namespace GadgeteerApp1
         public void initalStep()
         {
             program.mode = Mode.Solver;
-            initCell(root);
-            root.Parent = null;
             current = root;
+            root.Parent = null;
             facing = 0;
-            Advance(); //We are facing north, so start exploring north;
+            initCell(root);
             currentMove = root.North;
+            Advance(); //We are facing north, so start exploring north;            
         }
 
         private void Advance()
         {
-            program.addSPORK(new SPORK(Instruction.FORWARD,1));
+            program.addSPORK(SPORK.FORWARD);
+        }
+        private void Reverse()
+        {
+            program.addSPORK(SPORK.BACKWARD);
         }
         public void nextStep(CellType c)
         {
             if (c == CellType.Wall)
             {
-                //Undo currentMove
-                if (current.North == currentMove)
-                {
-                    Rotate(2);
-                    Advance();
-                } else if (current.East == currentMove)
-                {
-                    Rotate(3);
-                    Advance();
-                } else if (current.South == currentMove)
-                {
-                    Rotate(0);
-                    Advance();
-                } else if (current.West == currentMove)
-                {
-                    Rotate(1);
-                    Advance();
-                }
+                Debug2.Instance.Print("On a wall, go back");
+                Reverse();
+                 
                 currentMove.celltype = CellType.Wall;
                 //new instruction generated once returned and this function is called with false on old square
             }
@@ -86,6 +76,7 @@ namespace GadgeteerApp1
             {
                     if (c == CellType.Target && target == null)
                 {
+                    Debug2.Instance.Print("On the target");
                     target = currentMove;
                 }
 
@@ -94,6 +85,7 @@ namespace GadgeteerApp1
                 initCell(current);
                 if (current.North.celltype == CellType.Unvisited)
                 {
+                    Debug2.Instance.Print("North unvisited, go north");
                     Rotate(0);
                     Advance();
                     currentMove = current.North;
@@ -166,15 +158,15 @@ namespace GadgeteerApp1
             {
                 if (((facing + 1) % 4) == i)
                 {
-                    program.addSPORK(new SPORK(Instruction.RIGHT,0));
+                    program.addSPORK(SPORK.RIGHT);
                 }
                 else if (((facing + 2) % 4) == i)
                 {
-                    program.addSPORK(new SPORK(Instruction.RIGHT, 0));
-                    program.addSPORK(new SPORK(Instruction.RIGHT, 0));
+                    program.addSPORK(SPORK.RIGHT);
+                    program.addSPORK(SPORK.RIGHT);
                 } else if (((facing + 3) % 4) == i)
                 {
-                    program.addSPORK(new SPORK(Instruction.LEFT,0));
+                    program.addSPORK(SPORK.LEFT);
                 }
                 facing = i;
             }

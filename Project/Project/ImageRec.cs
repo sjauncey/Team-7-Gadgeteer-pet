@@ -26,6 +26,23 @@ namespace GadgeteerApp1
 
             tmr = new GT.Timer(100);
             tmr.Tick += new GT.Timer.TickEventHandler(test);
+            //camera.PictureCaptured += new Camera.PictureCapturedEventHandler(camera_PictureCaptured);
+        }
+
+        void camera_PictureCaptured(Camera sender, GT.Picture picture)
+        {
+            switch (testForWall(stream))
+            {
+                case 1:
+                    program.aboveWall();
+                    break;
+                case 0:
+                    program.aboveSpace();
+                    break;
+                case 2:
+                    program.aboveTarget();
+                    break;
+            }
         }
 
         public void startContinuousChecking()
@@ -44,7 +61,7 @@ namespace GadgeteerApp1
 
         void camera_BitmapStreamed(Camera sender, Bitmap bitmap)
         {
-            //Debug2.Instance.displayImage(stream);
+           Debug2.Instance.displayImage(stream);
         }
 
         void test(GT.Timer timer)
@@ -61,6 +78,7 @@ namespace GadgeteerApp1
                     program.aboveTarget();
                     break;
             }
+
         }
 
         // tests for walls and the finish cell - returns 0 for clear, 1 for wall, 2 for finish cell
@@ -173,7 +191,7 @@ namespace GadgeteerApp1
         bool isBlack(Single[] cols)
         {
             //Debug2.Instance.Print(cols[0].ToString() + " " + cols[1].ToString() + " " + cols[2].ToString());
-            if (cols[0] < 120 && cols[1] < 120 && cols[2] < 120)
+            if (cols[0] < 40 && cols[1] < 40 && cols[2] < 40)
             {
                 return true;
             }

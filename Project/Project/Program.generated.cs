@@ -20,8 +20,8 @@ namespace GadgeteerApp1
         Gadgeteer.Modules.Seeed.Relays relays;
         Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
         Gadgeteer.Modules.GHIElectronics.Camera camera;
-        Gadgeteer.Modules.Seeed.Compass compass;
         Gadgeteer.Modules.Seeed.CellularRadio cellularRadio;
+        Gadgeteer.Modules.Seeed.Gyro gyro;
         Gadgeteer.Modules.GHIElectronics.Button button;
 
         public static void Main()
@@ -42,7 +42,7 @@ namespace GadgeteerApp1
 		
             camera = new GTM.GHIElectronics.Camera(3);
 		
-            compass = new GTM.Seeed.Compass(4);
+            gyro = new GTM.Seeed.Gyro(4);
 		
             relays = new GTM.Seeed.Relays(6);
 		

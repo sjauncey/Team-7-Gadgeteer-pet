@@ -36,25 +36,19 @@ namespace GadgeteerApp1
                     switch (words[i])
                     {
                         case "FORWARD":
-
-                            if (words.Length > i + 1)
-                            {
-                                instructions.Enqueue(new SPORK(Instruction.FORWARD, Convert.ToInt16(words[i + 1])));
-                                i += 2;
-                            }
-                            else
-                            {
-                                Debug2.Instance.Print("Error"); //TODO
-                                i -= 1;
-                                throw new Exception();
-                            }
+                            instructions.Enqueue(SPORK.FORWARD);
+                            i += 1;
                             break;
                         case "LEFT":
-                            instructions.Enqueue(new SPORK(Instruction.LEFT, 0));
+                            instructions.Enqueue(SPORK.LEFT);
                             i += 1;
                             break;
                         case "RIGHT":
-                            instructions.Enqueue(new SPORK(Instruction.RIGHT, 0));
+                            instructions.Enqueue(SPORK.RIGHT);
+                            i += 1;
+                            break;
+                        case "BACKWARD":
+                            instructions.Enqueue(SPORK.BACKWARD);
                             i += 1;
                             break;
                         case "FW":
@@ -65,6 +59,8 @@ namespace GadgeteerApp1
                             goto case "LEFT";
                         case "R":
                             goto case "RIGHT";
+                        case "B":
+                            goto case "BACKWARD";
                         default:
                             throw new Exception();
 

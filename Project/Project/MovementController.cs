@@ -39,9 +39,9 @@ namespace GadgeteerApp1
         }
 
 
-        public void advance(int distance)
+        public void advance()
         {
-            Debug2.Instance.Print("advancing " + distance.ToString());
+            Debug2.Instance.Print("advancing");
             if (runTimer.IsRunning)
             {
                 //TODO: Error
@@ -49,17 +49,31 @@ namespace GadgeteerApp1
             else
             {
                 stop();
-                runTimer.Interval = new System.TimeSpan(0, 0, 0, 0, distance * timeUnit);
                 runTimer.Restart();
                 relays.Relay1 = true;
                 relays.Relay3 = true;
             }
         }
+        public void reverse()
+        {
+            Debug2.Instance.Print("reversing");
+            if (runTimer.IsRunning)
+            {
+                //TODO: Error
+            }
+            else
+            {
+                stop();
+                runTimer.Restart();
+                relays.Relay2 = true;
+                relays.Relay4 = true;
+            }
+        }
 
-        public void rotateRight()
+        public void rotateLeft()
         {
             stop();
-            Debug2.Instance.Print("rotate right");
+            Debug2.Instance.Print("rotate left");
             objective = (90 + offset);
             turned = 0;
             gyro.StartContinuousMeasurements();
@@ -67,10 +81,10 @@ namespace GadgeteerApp1
             relays.Relay4 = true;
         }
 
-        public void rotateLeft()
+        public void rotateRight()
         {
             stop();
-            Debug2.Instance.Print("rotate left");
+            Debug2.Instance.Print("rotate right");
             objective = (-90 + offset);
             turned = 0;
             gyro.StartContinuousMeasurements();
@@ -90,12 +104,12 @@ namespace GadgeteerApp1
                 if (offset < -5)
                 {
                     offset += 90;
-                    rotateLeft();
+                    rotateRight();
                 }
                 else if (offset > 5)
                 {
                     offset -= 90;
-                    rotateRight();
+                    rotateLeft();
                 }
                 else
                 {

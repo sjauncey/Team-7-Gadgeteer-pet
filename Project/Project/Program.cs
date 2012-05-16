@@ -21,6 +21,13 @@ namespace GadgeteerApp1
         Solver,
         Directed
     }
+    public enum SPORK
+    {
+        FORWARD,
+        LEFT,
+        RIGHT,
+        BACKWARD
+    }
 
     public partial class Program
     {
@@ -35,19 +42,25 @@ namespace GadgeteerApp1
 
         void ProgramStarted()
         {
-            mode = Mode.Directed;
+            mode = Mode.Solver;
             Debug2.Instance.setOled(oledDisplay);
-            Debug2.Instance.EnableScreenDebug();
+            //Debug2.Instance.DisableScreenDebug();
             Debug2.Instance.Print("Program Started");
             smsController = new SMS(this);
-            movementController = new MovementController(relays, gyro, this, 1000);
+            movementController = new MovementController(relays, gyro, this, 150);
             imageRec = new ImageRec(camera, this);
             ms = new MazeSearch(this);
-            //ms.initalStep();
+            ms.initalStep();
             //imageRec.startContinuousChecking();
-            addSPORK(new SPORK(Instruction.LEFT, 0));
-            addSPORK(new SPORK(Instruction.FORWARD, 1));
-            addSPORK(new SPORK(Instruction.RIGHT, 0));
+            //addSPORK(new SPORK(Instruction.LEFT, 0));
+            //addSPORK(new SPORK(Instruction.FORWARD, 1));
+            //addSPORK(new SPORK(Instruction.RIGHT, 0));
+            //cheat();
+        }
+
+        internal void cheat()
+        {
+            smsController.msgToSpork("F F R F F R F F R F F R");
         }
 
 
@@ -65,7 +78,16 @@ namespace GadgeteerApp1
         internal void addSPORK(SPORK s)
         {
             Debug.Print("Enqueuing " + s.ToString());
-            SPORKQueue.Enqueue(s);
+            if (s == SPORK.RIGHT || s ==SPORK.LEFT)
+            {
+                SPORKQueue.Enqueue(SPORK.FORWARD);
+                SPORKQueue.Enqueue(s);
+                SPORKQueue.Enqueue(SPORK.BACKWARD);
+            }
+            else
+            {
+                SPORKQueue.Enqueue(s);
+            }
             if (stationary)
             {
                 movementFinished();
@@ -74,28 +96,32 @@ namespace GadgeteerApp1
 
         internal void movementFinished()
         {
-            Debug2.Instance.Print("getting new instruction");
+            
             if (SPORKQueue.Count != 0)
             {
-                imageRec.testCurrentLocation();
+                Debug2.Instance.Print("getting new instruction");
                 stationary = false;
                 SPORK inst = (SPORK) SPORKQueue.Dequeue();
-                switch (inst.getInstruction())
+                switch (inst)
                 {
-                    case(Instruction.LEFT):
+                    case(SPORK.LEFT):
                         movementController.rotateLeft();
                         break;
-                    case(Instruction.RIGHT):
+                    case(SPORK.RIGHT):
                         movementController.rotateRight();
                         break;
-                    case(Instruction.FORWARD):
-                        movementController.advance(inst.getParamter());
+                    case(SPORK.FORWARD):
+                        movementController.advance();
+                        break;
+                    case (SPORK.BACKWARD):
+                        movementController.reverse();
                         break;
                 }
 
             }
             else
             {
+                Debug2.Instance.Print("No new instruction, testing square");
                 stationary = true;
                 if (mode == Mode.Solver)
                 {
@@ -109,7 +135,7 @@ namespace GadgeteerApp1
             Debug2.Instance.Print("Over white");
             if (mode == Mode.Solver)
             {
-                ms.nextStep(CellType.Unvisited);
+                ms.nextStep(CellType.Unfinished);
             }
             else
             {
