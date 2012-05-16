@@ -1,0 +1,862 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.Seeed.CellularRadio</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio">
+            <summary>
+            A CellularRadio module for Microsoft .NET Gadgeteer
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.PowerOn(System.Int32)">
+            <summary>
+            Power on the CellularRadio module.
+            </summary>
+            <param name="chargeTimeSeconds">Time, in seconds, to allow the supercapacitor on the CellularRadio module to charge up before turning on. Recommended time is 40 seconds from a cold start.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.PowerOn">
+            <summary>
+            Power on the CellularRadio module.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.PowerOff">
+            <summary>
+            Powers off the Cellular Radio module
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.#ctor(System.Int32)">
+            <summary>Instantiates a Cellular Radio Module</summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SendATCommand(System.String)">
+            <summary>
+            Sends an AT command to the Cellular Radio Module. It automatically appends the carriage return.
+            </summary>
+            <param name="atCommand">String containing the AT command. See SIM900_ATC_V1.00 for reference.</param>
+            <returns>
+            ReturnedState.OK - Command was sent
+            ReturnedState.ModuleIsOff - Module is off
+            ReturnedState.Error - Serial line is not open
+            ReturnedState.InvalidCommand - Invalid AT command
+            </returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnPinStateRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.PINState)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.PinStateRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="pinState">Current state of the PIN</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnGsmNetworkRegistrationChanged(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.GsmNetworkRegistrationChanged"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="networkState">Current state of the GSM network registration</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnGprsNetworkRegistrationChanged(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.GprsNetworkRegistrationChanged"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="networkState">Current state of the GPRS network registration</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnSmsReceived(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.Sms)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsReceived"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="message">Object containing the SMS message</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnIncomingCall(Gadgeteer.Modules.Seeed.CellularRadio,System.String)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.IncomingCall"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="caller">Number of the caller</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnSmsRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.Sms)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="message">SMS message that was requested</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnPhoneActivityRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityType)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="activity">Current activity in which the phone is engaged</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnContactRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.Contact)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ContactRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="contact">Contact object with the requested phonebook entry</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnClockRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,System.DateTime)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ClockRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="clock">Module's date and time</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnImeiRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,System.String)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ImeiRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="imei">Module's International Mobile Equipment Identification number</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnSignalStrengthRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="signalStrength">Strength of the signal</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnOperatorRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,System.String)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.OperatorRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="operatorName">Strength of the signal</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnSmsListRetrieved(Gadgeteer.Modules.Seeed.CellularRadio,System.Collections.ArrayList)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsListRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="smsList">Strength of the signal</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnCallEnded(Gadgeteer.Modules.Seeed.CellularRadio,Gadgeteer.Modules.Seeed.CellularRadio.CallEndType)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.CallEnded"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="reason">The reason the call has ended</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnCallConnected(Gadgeteer.Modules.Seeed.CellularRadio,System.String)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.CallConnected"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="number">Number to which the module is connected</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnGprsAttached(Gadgeteer.Modules.Seeed.CellularRadio,System.String)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.GprsAttached"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+            <param name="ipAddress">Number to which the module is connected</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.OnModuleInitialized(Gadgeteer.Modules.Seeed.CellularRadio)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ModuleInitialized"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>  
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SendSms(System.String,System.String)">
+            <summary>
+            Send an SMS text message
+            </summary>
+            <param name="number">String with the telephone number</param>
+            <param name="message">Body of the message</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveSms(System.Int32,System.Boolean)">
+            <summary>
+            Requests to read the SMS message in the specified position. Message is returned in the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsRetrieved"/> event.
+            </summary>
+            <param name="position">Position in memory where the message is stored</param>
+            <param name="markAsRead">Whether unread messages will be marked as read</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.DeleteSms(System.Int32)">
+            <summary>
+            Delete an SMS message
+            </summary>
+            <param name="position">Position in memory where the message is stored</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveSmsList(Gadgeteer.Modules.Seeed.CellularRadio.SmsState)">
+            <summary>
+            Requests to get all SMS in a given state or all of them.
+            </summary>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.DeleteAllSms">
+            <summary>
+            Deletes all SMS messages stored in the SIM card
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.PickUp">
+            <summary>
+            Picks up an incoming voice call
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.HangUp">
+            <summary>
+            Hangs up an active call
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.Dial(System.String)">
+            <summary>
+            Dials a number in order to start a voice call
+            </summary>
+            <param name="number">Number to be called</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.Redial">
+            <summary>
+            Redials the last number dialled
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrievePhoneActivity">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityRetrieved"/> event, which contains the activity in which the phone is currently engaged.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SaveContact(System.String,System.String)">
+            <summary>
+            Adds an entry to the SIM card phonebook
+            </summary>
+            <param name="number">Telephone number</param>
+            <param name="name">Name</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SaveContact(Gadgeteer.Modules.Seeed.CellularRadio.Contact)">
+            <summary>
+            Adds an entry to the SIM card phonebook
+            </summary>
+            <param name="contact">Contact object containing the number and name</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SaveContact(System.Int32,System.String,System.String)">
+            <summary>
+            Adds an entry to the SIM card phonebook
+            </summary>
+            <param name="index">Index of the entry where the contact is going to be stored</param>
+            <param name="number">Number</param>
+            <param name="name">Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SaveContact(System.Int32,Gadgeteer.Modules.Seeed.CellularRadio.Contact)">
+            <summary>
+            Adds an entry to the SIM card phonebook
+            </summary>
+            <param name="index">Index of the entry where the contact is going to be stored</param>
+            <param name="contact">Contact object containing the number and name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveContact(System.Int32)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ContactRetrieved"/> event, which contains the contact stored in the specified position.
+            </summary>
+            <param name="index">Index of the phonebook entry where the contact is stored</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.DeleteContact(System.Int32)">
+            <summary>
+            Delete the contact at the specified position
+            </summary>
+            <param name="index">Index of the phonebook entry where the contact is stored</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveClock">
+            <summary>
+            Sends a request to get the module's date and time
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SetClock(System.DateTime)">
+            <summary>
+            Sets the module's internal date and time
+            </summary>
+            <param name="clock"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveImei">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ImeiRetrieved"/> event which contains the module international mobile equipment identification number.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.Reset">
+            <summary>
+            Resets module
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveSignalStrength">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthRetrieved"/> event which contains the strength of the signal.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveOperator">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.OperatorRetrieved"/> event which contains the name of the operator, if the module is connected to a network.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrievePinState">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.PinStateRetrieved"/> event which contains the current state of the PIN.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.AttachGPRS(System.String,System.String,System.String)">
+            <summary>
+            Attach GPRS
+            </summary>
+            <param name="accessPointName"></param>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.DetachGprs">
+            <summary>
+            Detach GPRS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.ConnectTCP(System.String,System.Int32)">
+            <summary>
+            Connects to a TCP server
+            </summary>
+            <param name="server">IP address of the server</param>
+            <param name="port">Port in the server</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.DisconnectTCP">
+            <summary>
+            Disconnects from TCP server
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.ConfigureTCPServer(System.Int32)">
+            <summary>
+            Configure the module as a TCP server
+            </summary>
+            <param name="port">Port</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.SendTcpData(System.String)">
+            <summary>
+            Sends data over a TCP connection
+            </summary>
+            <param name="data">Data to be sent</param>
+            <returns></returns>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.CellularRadio.StartupInterval">
+            <summary>
+            Time interval in milliseconds to allow the module to initialize 
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.PinStateRetrieved">
+            <summary>
+            Event raised by the <see cref="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrievePinState"/> method.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.GsmNetworkRegistrationChanged">
+            <summary>
+            Event raised when the module emits a network registration message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.GprsNetworkRegistrationChanged">
+            <summary>
+            Event raised when the module emits a network registration message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsReceived">
+            <summary>
+            Event raised when the module receives a new SMS message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.IncomingCall">
+            <summary>
+            Event raised when the module detects an incoming call.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsRetrieved">
+            <summary>
+            Event raised when the module detects an incoming call.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityRetrieved">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.ContactRetrieved">
+            <summary>
+            Event raised by the <see cref="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveContact(System.Int32)"/> method
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.ClockRetrieved">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.ImeiRetrieved">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthRetrieved">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.OperatorRetrieved">
+            <summary>
+            Event raised by the <see cref="M:Gadgeteer.Modules.Seeed.CellularRadio.RetrieveOperator"/> method.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsListRetrieved">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.CallEnded">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.CallConnected">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.GprsAttached">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.CellularRadio.ModuleInitialized">
+            <summary>
+            Event raised when the module receives a phone activity message.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.ReturnedState">
+            <summary>
+            Possible retured states by methods
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.ReturnedState.OK">
+            <summary>
+            Operation successful
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.ReturnedState.Error">
+            <summary>
+            Error in the operation. See method documentation.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.ReturnedState.ModuleIsOff">
+            <summary>
+            Cellular Radio Module is off
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.ReturnedState.InvalidCommand">
+            <summary>
+            Command syntax is incorrect
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.ReturnedState.ModuleBusy">
+            <summary>
+            Module is busy
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState">
+            <summary>
+            Possible states of network registration
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState.NotSearching">
+            <summary>
+            Module couldn't find a network
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState.Registered">
+            <summary>
+            Module is registered to a network
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState.Searching">
+            <summary>
+            Module is searching for a network
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState.RegistrationDenied">
+            <summary>
+            Module tried to register to a network, but it was denied
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState.Roaming">
+            <summary>
+            Roaming
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.NetworkRegistrationState.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.PINState">
+            <summary>
+            Possible states of the SIM card
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.Ready">
+            <summary>
+            SIM is unlocked and ready to be used.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.PIN">
+            <summary>
+            SIM is locked waiting for the PIN
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.PUK">
+            <summary>
+            SIM is locked waiting for the PUK
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.PH_PIN">
+            <summary>
+            SIM is waiting for phone to SIM card (antitheft) 
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.PH_PUK">
+            <summary>
+            SIM is waiting for phone to SIM PUK (antitheft) 
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.PIN2">
+            <summary>
+            SIM is waiting for second PIN
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.PUK2">
+            <summary>
+            SIM is waiting for second PUK
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PINState.NotPresent">
+            <summary>
+            SIM is not present
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.SmsState">
+            <summary>
+            Possible states for a text message
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SmsState.ReceivedUnread">
+            <summary>
+            Messages that were received and read
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SmsState.ReceivedRead">
+            <summary>
+            Messages that were received but not yet read
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SmsState.StoredUnsent">
+            <summary>
+            Messages that were created but not yet sent
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SmsState.StoredSent">
+            <summary>
+            Messages that were created and sent
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SmsState.All">
+            <summary>
+            All messages
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityType">
+            <summary>
+            Possible states of a call
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityType.Ready">
+            <summary>
+            Phone is not calling or being called
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityType.Ringing">
+            <summary>
+            Ringer is active
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityType.CallInProgress">
+            <summary>
+            Active voice all
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityType.Unknown">
+            <summary>
+            Module is not guaranteed to respond.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityType.CommLineBusy">
+            <summary>
+            Communication line with the Cellular Radio Module is busy
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType">
+            <summary>
+            Possible values of the strength of a signal
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType.VeryWeak">
+            <summary>
+            -115dBm or less
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType.Weak">
+            <summary>
+            -111dBm
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType.Strong">
+            <summary>
+            -110..-54dBm
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType.VeryStrong">
+            <summary>
+            -52dBm or greater
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType.Unknown">
+            <summary>
+            Not known or undetectable
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthType.Error">
+            <summary>
+            Error in the response from the GSM Module
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.CallEndType">
+            <summary>
+            Reasons for a call to be ended
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.CallEndType.NoDialTone">
+            <summary>
+            No dial tone was found
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.CallEndType.NoCarrier">
+            <summary>
+            No carrier was found
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.CallEndType.Busy">
+            <summary>
+            Line is busy
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.PinStateRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.PinStateRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="pinState">Current state of the PIN</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.GsmNetworkRegistrationChangedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.GsmNetworkRegistrationChanged"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="networkState">Current state of the GSM network registration</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.GprsNetworkRegistrationChangedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.GprsNetworkRegistrationChanged"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="networkState">Current state of the GPRS network registration</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.SmsReceivedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsReceived"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="message">Object containing the SMS message</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.IncomingCallHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.IncomingCall"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="caller">Number of the caller</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.SmsRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="message">SMS message that was requested</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.PhoneActivityRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="activity">Current activity in which the phone is engaged</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.ContactOpenRetrieved">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ContactRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="contact">Contact object with the requested phonebook entry</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.ClockRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ClockRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="clock">Module's date and time</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.ImeiRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ImeiRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="imei">Module's International Mobile Equipment Identification number</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SignalStrengthRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="signalStrength">Strength of the signal</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.OperatorRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.OperatorRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="operatorName">Name of the operator to which the module is connected. It is null if the module is not connected to any operator.</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.SmsListRetrievedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.SmsListRetrieved"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="smsList">Strength of the signal</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.CallEndedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.CallEnded"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="reason">The reason the call has ended</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.CallConnectedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.CallConnected"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="number"> Number to which the module is connected</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.GprsAttachedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.GprsAttached"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="ipAddress"> Number to which the module is connected</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.ModuleInitializedHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.CellularRadio.ModuleInitialized"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.Sms">
+            <summary>
+            SMS Text Message
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.Sms.TelephoneNumber">
+            <summary>
+            Number
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.Sms.TextMessage">
+            <summary>
+            Message content
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.Sms.Status">
+            <summary>
+            Status of the message
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.Sms.Timestamp">
+            <summary>
+            Date and time when the message was sent or received
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.Sms.#ctor">
+            <summary>
+            Instantiates a new SMS with empty number, and content, marks it as unsent and with the current time as the timestamp.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.Sms.#ctor(System.String,System.String,Gadgeteer.Modules.Seeed.CellularRadio.SmsState,System.DateTime)">
+            <summary>
+            Instantiates a new SMS message with the given parameters.
+            </summary>
+            <param name="number">Number</param>
+            <param name="text">Message content</param>
+            <param name="state">Status</param>
+            <param name="timestamp">Timestamp</param>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.CellularRadio.Sms.Index">
+            <summary>
+            Index of the message in the SIM card's memory
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.CellularRadio.Contact">
+            <summary>
+            Entry of the phonebook
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.Contact.telephoneNumber">
+            <summary>
+            String with the telephone number
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.CellularRadio.Contact.name">
+            <summary>
+            Name of the entry
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.CellularRadio.Contact.#ctor(System.String,System.String)">
+            <summary>
+            Instantiates a Phonebook entry from a number and a name
+            </summary>
+            <param name="telephoneNumber"></param>
+            <param name="name"></param>
+        </member>
+    </members>
+</doc>

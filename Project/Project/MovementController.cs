@@ -17,92 +17,123 @@ namespace GadgeteerApp1
     class MovementController
     {
         private Relays relays;
-        private Compass compass;
+        private Gyro gyro;
         private GT.Timer runTimer;
-        private float offset;
-        private int objective;
+        private double offset;
+        private double objective;
+        private double turned;
         private Program model;
+        private int timeUnit;
 
-        public MovementController(Relays relayBoard, Compass compassBoard, Program passedModel){
+        public MovementController(Relays relayBoard, Gyro gyroBoard, Program passedModel, int timeUnit)
+        {
             model = passedModel;
             relays = relayBoard;
-            compass = compassBoard;
-            compass.MeasurementComplete +=new Compass.MeasurementCompleteEventHandler(compassContinuousComplete);
+            gyro = gyroBoard;
+            this.timeUnit = timeUnit;
+            runTimer = new GT.Timer(timeUnit, GT.Timer.BehaviorType.RunOnce);
+            runTimer.Tick += new GT.Timer.TickEventHandler(runTimer_Tick);
+            gyro.ContinuousMeasurementInterval = new System.TimeSpan(0, 0, 0, 0, 100);
+            gyro.Calibrate();
+            gyro.MeasurementComplete += new Gyro.MeasurementCompleteEventHandler(gyro_MeasurementComplete);
         }
 
-        //There's never any harm in having a destrucor.
-        //Might get rid of it at some point though
-        public ~MovementController(){
-            if(relays.Relay1 || relays.Relay2 || relays.Relay3 || relays.Relay4 || runTimer.IsRunning){
-            //TODO Some error has occured. Handle properly.
+
+        public void advance()
+        {
+            Debug2.Instance.Print("advancing");
+            if (runTimer.IsRunning)
+            {
+                //TODO: Error
+            }
+            else
+            {
+                stop();
+                runTimer.Restart();
+                relays.Relay1 = true;
+                relays.Relay3 = true;
+            }
+        }
+        public void reverse()
+        {
+            Debug2.Instance.Print("reversing");
+            if (runTimer.IsRunning)
+            {
+                //TODO: Error
+            }
+            else
+            {
+                stop();
+                runTimer.Restart();
+                relays.Relay2 = true;
+                relays.Relay4 = true;
             }
         }
 
-        public void advance(){
-            runTimer.Start();
-            relays.Relay1 = true;
-            relays.Relay3 = true;
-        }
-
-        public void rotateRight(){
-            objective = (objective + 90) % 360;
-
-            relays.Relay2 = true;
-            relays.Relay3 = true;
-
-            compass.StartContinuousMeasurements();
-        }
-
-        public void rotateLeft(){
-            objective = (objective + 270) % 360; //Can't just minus 90 as % will give -ve answer on -ve input
- 
+        public void rotateLeft()
+        {
+            stop();
+            Debug2.Instance.Print("rotate left");
+            objective = (90 + offset);
+            turned = 0;
+            gyro.StartContinuousMeasurements();
             relays.Relay1 = true;
             relays.Relay4 = true;
+        }
 
-            compass.StartContinuousMeasurements();
+        public void rotateRight()
+        {
+            stop();
+            Debug2.Instance.Print("rotate right");
+            objective = (-90 + offset);
+            turned = 0;
+            gyro.StartContinuousMeasurements();
+            relays.Relay2 = true;
+            relays.Relay3 = true;
         }
 
 
-        public void setRunTime(int milliseconds){
-            runTimer = new GT.Timer(milliseconds);
-            runTimer.Tick += new GT.Timer.TickEventHandler(runTimer_Tick);
-        }
-
-        public void setOffset(){
-            compass.MeasurementComplete += new Compass.MeasurementCompleteEventHandler(compassDiscreteComplete);
-            compass.RequestMeasurement();
-            compass.MeasurementComplete -= compassDiscreteComplete;
-        }
-
-        void compassDiscreteComplete(Compass sender, Compass.SensorData sensorData){
-            offset = 45 - sensorData.X;
-        }
-
-        void compassContinuousComplete(Compass sender, Compass.SensorData sensorData){
-            int value = (int)localise(sensorData.X);
-            if (Math.Abs(value - objective) < 3){
+        void gyro_MeasurementComplete(Gyro sender, Gyro.SensorData sensorData)
+        {
+            turned += (sensorData.Z / 10);
+            if (((objective < 0) && (turned < objective)) || ((objective > 0) && (turned > objective)))
+            {
                 stop();
-                compass.StopContinuousMeasurements();
-                model.movementFinished();
+                offset = objective - turned;
+                gyro.StopContinuousMeasurements();
+                if (offset < -5)
+                {
+                    offset += 90;
+                    rotateRight();
+                }
+                else if (offset > 5)
+                {
+                    offset -= 90;
+                    rotateLeft();
+                }
+                else
+                {
+                    model.movementFinished();
+                }
+
             }
         }
 
-        public void allStop(){
+        public void allStop()
+        {
             stop();
             runTimer.Stop();
         }
 
-        private void runTimer_Tick(GT.Timer timer){
+        private void runTimer_Tick(GT.Timer timer)
+        {
+            Debug2.Instance.Print("advance finished");
             stop();
-            runTimer.Stop();
             model.movementFinished();
         }
 
-        private float localise(float measure){
-            return (measure + offset) % 360;
-        }
-
-        private void stop(){
+        private void stop()
+        {
             relays.Relay1 = false;
             relays.Relay2 = false;
             relays.Relay3 = false;

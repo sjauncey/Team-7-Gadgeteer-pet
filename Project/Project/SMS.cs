@@ -10,79 +10,72 @@ using System.Collections;
 
 namespace GadgeteerApp1
 {
-    /*
+
     class SMS
     {
-        Program model;
+        Program program;
 
-        public SMS(Program model)
+        public SMS(Program program)
         {
-            this.model = model;
+            this.program = program;
         }
 
-        public void smsHandler(CellularRadio sender, CellularRadio.Sms message)
+        public void msgToSpork(string message)
         {
-            if (message.TelephoneNumber != "0")
+
+            char[] delims = { ' ', ',', '.', ':', '\t', '\n' };
+            string[] words = message.ToUpper().Split(delims);
+
+            Queue instructions = new Queue();
+            int i = 0;
+            //Using i+1 here to ensure we don't get an error when we look at words[i+1]
+            while (i < words.Length)
             {
-                char[] delims = { ' ', ',', '.', ':', '\t', '\n' };
-                string[] words = message.TextMessage.ToUpper().Split(delims);
-
-                Queue instructions = new Queue();
-                int i = 0;
-                //Using i+1 here to ensure we don't get an error when we look at words[i+1]
-                while (i + 1 < words.Length)
+                try
                 {
-                    try
+                    switch (words[i])
                     {
-                        switch (words[i])
-                        {
-                            case "FORWARD":
-                                instructions.Enqueue(new SPORK(Instruction.FORWARD, Convert.ToInt16(words[i + 1])));
-                                i += 2;
-                                break;
-                            case "LEFT":
-                                 instructions.Enqueue(new SPORK(Instruction.LEFT, Convert.ToInt16(words[i + 1])));
-                                i += 2;
-                                break;
-                            case "RIGHT":
-                                 instructions.Enqueue(new SPORK(Instruction.RIGHT, Convert.ToInt16(words[i + 1])));
-                                i += 2;
-                                break;
-                            case "FW":
-                                words[i] = "FORWARD";
-                                break;
-                            case "L":
-                                words[i] = "LEFT";
-                                break;
-                            case "R":
-                                words[i] = "RIGHT";
-                                break;
-                            default:
-                                throw new NotSupportedException();
+                        case "FORWARD":
+                            instructions.Enqueue(SPORK.FORWARD);
+                            i += 1;
+                            break;
+                        case "LEFT":
+                            instructions.Enqueue(SPORK.LEFT);
+                            i += 1;
+                            break;
+                        case "RIGHT":
+                            instructions.Enqueue(SPORK.RIGHT);
+                            i += 1;
+                            break;
+                        case "BACKWARD":
+                            instructions.Enqueue(SPORK.BACKWARD);
+                            i += 1;
+                            break;
+                        case "FW":
+                            goto case "FORWARD";
+                        case "F":
+                            goto case "FORWARD";
+                        case "L":
+                            goto case "LEFT";
+                        case "R":
+                            goto case "RIGHT";
+                        case "B":
+                            goto case "BACKWARD";
+                        default:
+                            throw new Exception();
 
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        //we better throw and error here, or whatever is the most efficient way to deal with errors.
-                        //Would a custom error reporting module be best? Can print to the oled?
-                        //error is in words[i+1]
                     }
                 }
-
-                if (i < words.Length)
+                catch (Exception e)
                 {
-                    //Then we stopped before looking at the last word. Better throw and error.
-                    throw new NotSupportedException();
-                    //We need a better way of handling badly formatted messages.
-                    //Replace errors with local handling, displaying messages on the screen for example.
-                    //words[i] will contain the faulty word.
+                    Debug2.Instance.Print("Error Parsing Commands. Error in: '" + words[i + 1] + "' after '" + words[i]);
                 }
-
-                model.addSPORKS(instructions);
             }
+
+            program.addSPORKS(instructions);
         }
+
     }
-*/
+
 }
 

@@ -15,33 +15,40 @@ namespace GadgeteerApp1
 {
     public partial class Program : Gadgeteer.Program
     {
-        // GTM.Module defintions
-		Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClient;
-		Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
-		Gadgeteer.Modules.Seeed.Relays relays;
-		Gadgeteer.Modules.Seeed.Compass compass;
+        // GTM.Module definitions
+        Gadgeteer.Modules.GHIElectronics.UsbClientDP usbClient;
+        Gadgeteer.Modules.Seeed.Relays relays;
+        Gadgeteer.Modules.Seeed.OledDisplay oledDisplay;
+        Gadgeteer.Modules.GHIElectronics.Camera camera;
+        Gadgeteer.Modules.Seeed.CellularRadio cellularRadio;
+        Gadgeteer.Modules.Seeed.Gyro gyro;
+        Gadgeteer.Modules.GHIElectronics.Button button;
 
-		public static void Main()
+        public static void Main()
         {
-			//Important to initialize the Mainboard first
+            //Important to initialize the Mainboard first
             Mainboard = new GHIElectronics.Gadgeteer.FEZSpider();			
 
             Program program = new Program();
-			program.InitializeModules();
+            program.InitializeModules();
             program.ProgramStarted();
             program.Run(); // Starts Dispatcher
         }
 
         private void InitializeModules()
         {   
-			// Initialize GTM.Modules and event handlers here.		
-			usbClient = new GTM.GHIElectronics.UsbClientDP(1);
+            // Initialize GTM.Modules and event handlers here.		
+            usbClient = new GTM.GHIElectronics.UsbClientDP(1);
 		
-			oledDisplay = new GTM.Seeed.OledDisplay(6);
+            camera = new GTM.GHIElectronics.Camera(3);
 		
-			relays = new GTM.Seeed.Relays(8);
+            gyro = new GTM.Seeed.Gyro(4);
 		
-			compass = new GTM.Seeed.Compass(10);
+            relays = new GTM.Seeed.Relays(6);
+		
+            button = new GTM.GHIElectronics.Button(8);
+		
+            oledDisplay = new GTM.Seeed.OledDisplay(9);
 
         }
     }

@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.Seeed.Compass</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.Seeed.Compass">
+            <summary>
+            A Compass module for Microsoft .NET Gadgeteer, based on the Honeywell HMC5883
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.#ctor(System.Int32)">
+            <summary></summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.RequestMeasurement">
+            <summary>
+            Requests a single reading from the <see cref="T:Gadgeteer.Modules.Seeed.Compass"/> and raises the <see cref="E:Gadgeteer.Modules.Seeed.Compass.MeasurementComplete"/> event when complete.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.SetGain(Gadgeteer.Modules.Seeed.Compass.Gain)">
+            <summary>
+            Sets the sensor gain value.
+            </summary>
+            <param name="gain">Gain value.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.Atan2(System.Double,System.Double)">
+            <summary>
+            Returns the angle whose tangent is the quotient of two specified numbers.
+            </summary>
+            <param name="y">The y coordinate of a point</param>
+            <param name="x">The x coordinate of a point</param>
+            <returns>The arctangent of x/y</returns>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.StartContinuousMeasurements">
+            <summary>
+            Starts continuous measurements.
+            </summary>
+            <remarks>
+            When this method is called, the <see cref="T:Gadgeteer.Modules.Seeed.Compass"/> begins taking continuous measurements.
+            At each <see cref="P:Gadgeteer.Modules.Seeed.Compass.ContinuousMeasurementInterval"/>, it calls the <see cref="M:Gadgeteer.Modules.Seeed.Compass.RequestMeasurement"/> method,
+            which raises the <see cref="E:Gadgeteer.Modules.Seeed.Compass.MeasurementComplete"/> event.
+            </remarks>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.StopContinuousMeasurements">
+            <summary>
+            Stops continuous measurements.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.OnMeasurementCompleteEvent(Gadgeteer.Modules.Seeed.Compass,Gadgeteer.Modules.Seeed.Compass.SensorData)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.Compass.MeasurementComplete"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="sensorData">The <see cref="T:Gadgeteer.Modules.Seeed.Compass.SensorData"/> object that contains the results of the measurement.</param>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Compass.ContinuousMeasurementInterval">
+            <summary>
+            Gets or sets the interval at which continuous measurements are taken.
+            </summary>
+            <remarks>
+            The default value for this property is 200 milliseconds.
+            </remarks>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.Compass.MeasurementComplete">
+            <summary>
+            Event raised when a measurement reading is completed.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.Compass.Gain">
+            <summary>
+            Possible sensing gain values.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain1">
+            <summary>
+            +/- 0.88 Ga
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain2">
+            <summary>
+            +/- 1.2 Ga (default)
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain3">
+            <summary>
+            +/- 1.9 Ga
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain4">
+            <summary>
+            +/- 2.5 Ga
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain5">
+            <summary>
+            +/- 4.0 Ga
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain6">
+            <summary>
+            +/- 4.7 Ga
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain7">
+            <summary>
+            +/- 5.6 Ga
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Gain.Gain8">
+            <summary>
+            +/- 8.1 Ga
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Mode.Continous">
+            <summary>
+            Continous-Measurement Mode.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Mode.SingleMode">
+            <summary>
+            Singleshot-Measurement Mode.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Mode.IdleMode">
+            <summary>
+            Idle Mode.
+            </summary>
+        </member>
+        <member name="F:Gadgeteer.Modules.Seeed.Compass.Mode.SleepMode">
+            <summary>
+            Sleep Mode.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.Compass.SensorData">
+            <summary>
+            A set of sensor measurements.
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.SensorData.#ctor(System.Double,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            A set of sensor measurements.
+            </summary>
+            <param name="angle">Angle of heading in the XY plane, in radians.</param>
+            <param name="x">Raw X-axis sensor data.</param>
+            <param name="y">Raw Y-axis sensor data.</param>
+            <param name="z">Raw Z-axis sensor data.</param>            
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.Compass.SensorData.ToString">
+            <summary>
+            Provides a string representation of the <see cref="T:Gadgeteer.Modules.Seeed.Compass.SensorData"/> instance.
+            </summary>
+            <returns>A string describing the values contained in the object.</returns>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Compass.SensorData.X">
+            <summary>
+            Raw X-axis sensor data.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Compass.SensorData.Y">
+            <summary>
+            Raw Y-axis sensor data.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Compass.SensorData.Z">
+            <summary>
+            Raw Z-axis sensor data.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.Compass.SensorData.Angle">
+            <summary>
+            Angle of heading in the XY plane, in radians.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.Compass.MeasurementCompleteEventHandler">
+            <summary>
+            Represents the delegate used for the <see cref="E:Gadgeteer.Modules.Seeed.Compass.MeasurementComplete"/> event.
+            </summary>
+            <param name="sender">The object that raised the event.</param>
+            <param name="sensorData">The <see cref="T:Gadgeteer.Modules.Seeed.Compass.SensorData"/> object that contains the results of the reading.</param>
+        </member>
+    </members>
+</doc>
